@@ -244,16 +244,23 @@
       justify-content: space-between;
   }
   .segundaSecao div{
+      width: 45%;
       display: flex;
       flex-direction: column;
       align-content: center;
+      justify-content: space-between;
       align-items: center;
+      background: #f2f2f2;
+      overflow: hidden;
+      border-radius: 20px;
+      cursor: pointer;
+      box-shadow: 0 0 20px 8px #d0d0d0;
   }
   .segundaSecao img{
       text-align: center;
-      margin: 2%;
       height: 100%;
-      width: 90%;
+      width: 100%;
+      
   }
 
   .terceiraSecao{
@@ -265,16 +272,21 @@
     justify-content: space-between;
 }   
 .terceiraSecao div{
+    width: 20%;
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
+    background: #f2f2f2;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 20px 8px #d0d0d0;
 }
   .terceiraSecao img{
     text-align: center;
-    margin: 2%;
     height: 100%;
-    width: 90%;
+    width: 100%;
 }
 .quartaSecao{
     display: flex;
@@ -336,6 +348,7 @@ body { font-family: sans-serif; }
   background: #8C8;
   border-radius: 5px;
   counter-increment: carousel-cell; */
+ 
 }
 
 .carousel-cell2.is-selected {
@@ -376,9 +389,15 @@ body { font-family: sans-serif; }
   width: 28%;
   height: 300px;
   margin-right: 10px;
-  background: white;
+  /* background: white; */
   border-radius: 5px;
   counter-increment: carousel-cell;
+  background: #f2f2f2;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 20px 8px #d0d0d0;
+  margin-bottom: 10px;
   /* margin-bottom: 20px; */
 }
 
@@ -392,4 +411,9 @@ button{
   justify-content: first baseline;
   /* margin-top: -100px; */
 }
+
+
+/* card */
+
+
 
