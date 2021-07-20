@@ -243,6 +243,7 @@
       width: 100%;
       justify-content: space-between;
   }
+
   .segundaSecao div{
       width: 45%;
       display: flex;
@@ -387,7 +388,7 @@ body { font-family: sans-serif; }
   flex-direction: column;
   justify-content: center;
   width: 28%;
-  height: 300px;
+  height: auto;
   margin-right: 10px;
   /* background: white; */
   border-radius: 5px;
@@ -412,6 +413,34 @@ button{
   /* margin-top: -100px; */
 }
 
+
+@media only screen and (max-width: 768px) {
+  .segundaSecao{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .segundaSecao div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .terceiraSecao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .terceiraSecao div{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
 
 /* card */
 
