@@ -53,6 +53,7 @@
     padding: 0 1.25rem;
     font-family: 'Lato', sans-serif;
     justify-content: space-evenly;
+    font-size: 16px;
 
   }
   
@@ -92,6 +93,7 @@
     perspective: 100px;
     height:30%;
     padding-top: 200px;
+    margin-bottom: 20px;
   }
   
   .carousel__viewport {
@@ -271,6 +273,7 @@
     height: 40%;
     width: 100%;
     justify-content: space-between;
+    margin-bottom: 20px;
 }   
 .terceiraSecao div{
     width: 20%;
@@ -440,6 +443,10 @@ button{
     width: 100%;
     margin-bottom: 20px;
   }
+  .fonteMenor{
+    font-size: 16px;
+
+  } 
 }
 
 /* card */
