@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/estiloCarrinho.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+</head>
+<body>
+    <%- include("./partials/header") %>
+
+    <div id="carrinhoContainer">
+        <h2>compre também</h2>
+        <div id="carrosselCarrinho">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+        <!-- logica JS para inserir itens -->
+        <form action="" id="pagamento">
+            <article id="produtoCarrinho">
+                <img src="/img/produtos/Nokia-1100.jpg" alt="Produto" id="fotoProduto">
+                <div id="descricaoCarrinho">
+                    Dumbphone Nokia 1100 preto com lanterna e joguinho da cobrinha
+                </div>
+                <div id="quantidadeCarrinho">
+                     <label for="quantidade">Quantidade</label> 
+                    <select name="quantidade" id="quatidadeCarinhoSelect">
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                        <option value="4"></option>
+                        <option value="5"></option>
+                        <option value="6"></option>
+                        <option value="7"></option>
+                        <option value="8"></option>
+                        <option value="9"></option>
+                        <option value="10"></option>
+                    </select>
+                </div>
+                <div id="precoItem">
+                    Preço
+                    R$ 100,00
+                </div>
+            </article>
+            <section id="frete">
+                <label for="CEP">Calcular frete</label>
+                <input type="number" name="CEP" id="cepCarrinho" placeholder="XXXXX-XXX">
+                <div>Subtotal = R$ 100,00</div>
+            </section>
+            <section id="endereco">
+                Revisão do Pedido
+
+                Av. Afonso Pena, 3000 - Centro, Belo Horizonte - MG
+            </section>
+            <section id="cupom">
+                
+                <label for="cupom">insira o cupom de desconto</label>
+                <input type="text" name="cupom">
+            </section>
+            
+            <section>
+
+                <input type="radio" name="cartaoCredito" id="cartaoCredito">
+                Cartão de Crédito
+                <div id="escolhaCredito">
+                <label for="numeroCartao">Número impresso no Cartão</label>
+                <input type="number" name="numeroCartao" id="numeroCartao">
+                <label for="nomeCartao">Nome impresso no Cartão</label>
+                <input type="text" name="nomeCartao" id="nomeCartao">
+                <label for="validadeCartao">Validade</label>
+                <select name="validadeCartao" id="validadeCartao">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select name="validadeCartaoAno" id="validadeCartaoAno">
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                </select>
+                <label for="codSeguranca">Codigo de Segurança</label>
+                <input type="number" name="codSeguranca" id="codSeguranca">
+                <label for="Parcelamento">Parcelamento</label>
+                <select name="parcelamento" id="parcelamento">
+                    <option value="1">1X R$ 100,00 sem juros</option>
+                    <option value="2">2X R$  50,00 sem juros</option>
+                    <option value="3">3X R$  35,00 com juros</option>
+                    <option value="4">4X R$  28,00 com juros</option>
+                    <option value="5">5X R$  23,00 com juros</option>
+                </select>
+                <label for="salvarCartao">Salvar o cartão para compras futuras</label>
+                <input type="checkbox" name="salvarCartao">
+            </section>
+            <button type="submit">Concluir Pedido</button>
+            </div>
+        </form>
+    </div>
+
+    <%- include("./partials/footer") %>
+</body>
+</html>
