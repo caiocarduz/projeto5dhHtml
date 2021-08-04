@@ -1,6 +1,7 @@
 *{
     padding: 0%;
     margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   body{
     display: flex;
@@ -36,6 +37,20 @@
     align-items: center;
     justify-content: space-around;
   
+  }
+  #busca{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  #lupa{
+    height: 30px;
+  }
+  #submit{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
   }
   #headerLogo{
     height: 150px;
@@ -103,10 +118,18 @@
   /* <<<<<<<<<<<<<<<<<<<<<<<< Estilos do Cartao de credito >>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 #pagamento{
+  margin-top: 50px;
+  padding: 50px;
     width: 100%;
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
 }
 #carrinhoContainer{
+    padding-top: 50px;
     width: 90%;
     display: flex;
     flex-wrap: wrap;
@@ -116,33 +139,92 @@
     /* background-color: aqua; */
   }
   #produtoCarrinho{
-      width: 100%;
+    background-color: whitesmoke;
+      width: 80%;
+      padding: 50px;
+      border: solid 1px snow;
+      border-radius: 25px;
+      box-shadow: 5px 5px 6px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: space-around;
+      margin-bottom: 50px;
   }
   #fotoProduto{
-      background-color: blue;
+      /* background-color: blue; */
       width: 100px;
   }
   #descricaoCarrinho{
       width: 300px;
-      background-color: aqua;
+      font-size: large;
+      
   }
   #quantidadeCarrinho{
       width: 200px;
-      background-color:yellow;
+     
   }
   #frete{
       width: 500px;
-      background-color: blueviolet;
+      /* background-color: blueviolet; */
   }
   #endereco{
-      background-color: cornflowerblue;
+      /* background-color: cornflowerblue; */
       width: 500px;
   }
   #cupom{
-      background-color: darkgray;
+      /* background-color: darkgray; */
       width:300px;
   }
+#formaPagamentoContainer{
+  font-size: x-large;
+  background-color: brown;
+  color: silver;
+  border-radius: 15px;
+  height: 250px;
+  width: 500px;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 25px;
+}
+#numeroCartao{
+  margin-bottom: 20x;
+  width: 80%;
+  font-size: 40px;
+  /* height: 2em; */
+  color: silver;
+  background-color: rgb(128, 20, 20);
+  border: none;
+  flex-grow: 1;
+}
+#nomeCartao{
+  margin-top: 50px;
+  width: 80%;
+  font-size: x-large;
+  /* height: 2em; */
+  color: silver;
+  background-color: rgb(128, 20, 20);
+  border: none;
+  flex-grow: 1;
+}
+
+#codSeguranca{
+  margin-top: 50px;
+  width: 15%;
+  font-size: x-large;
+  /* height: 2em; */
+  color: silver;
+  background-color: rgb(128, 20, 20);
+  border: none;
+  flex-grow: 1;
+}
+#parcelamento{
+  margin: 25px;
+}
+#pagar{
+  margin-top: 25px;
+}
