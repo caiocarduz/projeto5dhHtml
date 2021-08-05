@@ -1,0 +1,230 @@
+*{
+    padding: 0%;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Adicionar CSS do Header pra baixo >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+  header{
+    width: 90%;
+  
+  }
+  #headerSpaceTop{
+    background-color: darkgray;
+    height: 30px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  header > nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #headerTop{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  
+  }
+  #busca{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  #lupa{
+    height: 30px;
+  }
+  #submit{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  #headerLogo{
+    height: 150px;
+  }
+  #headerTop > form > input{
+    width: 400px;
+    height: 50px;
+    border-right: none;
+    margin-right: none;
+  }
+  #headerTop > form > button{
+    height: 54px;
+    border-left: none;
+    margin-left: none;
+    background-color: white;
+  }
+  #headerBot{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  }
+  header > nav >div > ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  }
+  
+  header > nav >div > ul > li{
+    list-style: none;
+    
+  
+  }
+  
+  /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  FIM DO HEADER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+  /* Adcionar CSS do footer para baixo */
+  footer{padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    background-color:rgb(50, 50, 50);
+    color:white;
+  }
+  footer > section{
+    width: 100%;
+    margin-top: 30px;
+    display:flex;
+    justify-content: space-around;
+    align-items:flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+  }
+  footer > section > article{
+    width: 20%;
+  }
+  #credcards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* <<<<<<<<<<<<<<<<<<<<<<<< Estilos do Cartao de credito >>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+#pagamento{
+  margin-top: 50px;
+  padding: 50px;
+    width: 100%;
+    /* background-color: blanchedalmond; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#carrinhoContainer{
+    padding-top: 50px;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+  }
+  #produtoCarrinho{
+    background-color: whitesmoke;
+      width: 80%;
+      padding: 50px;
+      border: solid 1px snow;
+      border-radius: 25px;
+      box-shadow: 5px 5px 6px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 50px;
+  }
+  #fotoProduto{
+      /* background-color: blue; */
+      width: 100px;
+  }
+  #descricaoCarrinho{
+      width: 300px;
+      font-size: large;
+      
+  }
+  #quantidadeCarrinho{
+      width: 200px;
+     
+  }
+  #frete{
+      width: 500px;
+      /* background-color: blueviolet; */
+  }
+  #endereco{
+      /* background-color: cornflowerblue; */
+      width: 500px;
+  }
+  #cupom{
+      /* background-color: darkgray; */
+      width:300px;
+  }
+#formaPagamentoContainer{
+  font-size: x-large;
+  background-color: brown;
+  color: silver;
+  border-radius: 15px;
+  height: 250px;
+  width: 500px;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 25px;
+}
+#numeroCartao{
+  margin-bottom: 20x;
+  width: 80%;
+  font-size: 40px;
+  /* height: 2em; */
+  color: silver;
+  background-color: rgb(128, 20, 20);
+  border: none;
+  flex-grow: 1;
+}
+#nomeCartao{
+  margin-top: 50px;
+  width: 80%;
+  font-size: x-large;
+  /* height: 2em; */
+  color: silver;
+  background-color: rgb(128, 20, 20);
+  border: none;
+  flex-grow: 1;
+}
+
+#codSeguranca{
+  margin-top: 50px;
+  width: 15%;
+  font-size: x-large;
+  /* height: 2em; */
+  color: silver;
+  background-color: rgb(128, 20, 20);
+  border: none;
+  flex-grow: 1;
+}
+#parcelamento{
+  margin: 25px;
+}
+#pagar{
+  margin-top: 25px;
+}

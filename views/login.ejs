@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/flickity.css" media="screen"> 
+    <link rel="stylesheet" href="/css/header.css" media="screen"> 
+    <link rel="stylesheet" href="/css/footer.css" media="screen"> 
+    <!-- CSS -->
+    <link rel="stylesheet" href="flickity.css" media="screen"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+  <%- include("./partials/header") %>
+    <section>
+        <h1>Identificação</h1>
+    </section>
+    <section class="secao-login">
+        <div className='sign-in'>
+            <h2>Criar Conta</h2>
+            <form class="margem">
+                <div class='group'>
+                    <input class='form-input'/>
+                      <label
+                        class= 'form-input-label'
+                      > E-mail
+                    </label>
+                  </div>
+            </form>
+            <form class="margem">
+                <div class='group'>
+                    <input class='form-input' type="password"/>
+                      <label
+                        class='form-input-label'
+                      > Senha
+                    </label>
+                  </div>
+            </form>
+            <div class="buttons">
+                <button class="custom-button">
+                    cadastre-se
+                </button>
+            </div>
+            
+        </div>
+        <div className='sign-up'>
+            <h2>Fazer login</h2>
+            <form class="margem">
+                <div class='group'>
+                    <input class='form-input'/>
+                      <label
+                        class= 'form-input-label'
+                      > E-mail
+                    </label>
+                  </div>
+            </form>
+            <form class="margem">
+                <div class='group'>
+                    <input class='form-input' type="password"/>
+                      <label
+                        class='form-input-label'
+                      > Senha
+                    </label>
+                  </div>
+            </form>
+            <div class="buttons">
+                <button class="custom-button">
+                    Entrar
+                </button>
+            </div>
+        </div>
+
+    </section>
+    <section class="rede-social">
+        <div>Use sua rede social para se conectar*</div>
+        <div class="buttons facebook">
+            <button class="botao-rede-social">
+                Facebook
+            </button>
+        </div>
+        <div class="buttons google">
+            <button class="botao-rede-social">
+                Google
+            </button>
+        </div>
+    </section>
+    <section class="rodape">
+        <h5> Nada será publicado em sua timeline. Serviço válido para pessoas físicas. Seu dados pessoais serão respeitados de acordo com a nossa política de privacidade</h5>
+    </section>
+    <%- include("./partials/footer") %>
+</body>
+<script src="/js/login.js"></script>
+</html>

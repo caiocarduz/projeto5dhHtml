@@ -1,0 +1,74 @@
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Adicionar CSS do Header pra baixo >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+  #headerSpaceTop{
+    background-color: darkgray;
+    height: 30px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  header > nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #headerTop{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  
+  }
+  #busca{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  #lupa{
+    height: 30px;
+  }
+  #submit{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  #headerLogo{
+    height: 150px;
+  }
+  #headerTop > form > input{
+    width: 400px;
+    height: 50px;
+    border-right: none;
+    margin-right: none;
+  }
+  #headerTop > form > button{
+    height: 54px;
+    border-left: none;
+    margin-left: none;
+    background-color: white;
+  }
+  #headerBot{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  }
+  header > nav >div > ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  }
+  
+  header > nav >div > ul > li{
+    list-style: none;
+    
+  
+  }
