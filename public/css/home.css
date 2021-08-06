@@ -116,13 +116,13 @@
     position: relative;
     flex: 0 0 100%;
     width: 100%;
-    background-color: #f99;
+    /* background-color: #f99; */
     counter-increment: item;
   }
   
-  .carousel__slide:nth-child(even) {
+  /* .carousel__slide:nth-child(even) {
     background-color: #99f;
-  }
+  } */
   
   .carousel__slide:before {
     content: counter(item);
@@ -367,6 +367,7 @@ body { font-family: sans-serif; }
 }
 
 .carousel-cell2 {
+  margin-bottom: 10px;
   max-height: 420px;
   max-width: 280px;
   /* width: 100%;
