@@ -1,4 +1,10 @@
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Adicionar CSS do Header pra baixo >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+html *
+{
+   /* font-size: 1em !important; */
+   /* color: #000 !important; */
+   font-family: sans-serif !important;
+}
 
   #headerSpaceTop{
     background-color: darkgray;
@@ -14,6 +20,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(240, 224, 8);
   }
   #headerTop{
     margin-top: 5px;
