@@ -257,7 +257,7 @@
 
   li img{
     height: 100%;
-    max-width: 100%;
+    max-width: 2400px;
     object-fit: cover;
   }
   
@@ -325,15 +325,15 @@
 }
 
 
-  
-  .terceiraSecao{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    height: 40%;
-    width: 100%;
-    justify-content: space-between;
-    margin-bottom: 20px;
+
+.terceiraSecao{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 40%;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }   
 .terceiraSecao div{
     width: 20%;
