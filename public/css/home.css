@@ -93,12 +93,16 @@
     padding-top: 75%;
     filter: drop-shadow(0 0 10px #0003);
     perspective: 100px;
-    height:340px;
+    max-height: 340px;
     padding-top: 200px;
     margin-bottom: 20px;
+    /* max-width: 2400px; */
+    display: flex;
   }
   
   .carousel__viewport {
+    max-height: 340px;
+    width: 100%;
     position: absolute;
     top: 0;
     right: 0;
@@ -198,7 +202,7 @@
   .carousel__next {
     position:absolute;
     top: 0;
-    margin-top: 150px;
+    margin-top: 100px;
     width: 4rem;
     height: 4rem;
     transform: translateY(-50%);
@@ -244,7 +248,7 @@
 
   li img{
     height: 100%;
-    max-width: 100%;
+    width: 100%;
     object-fit: cover;
   }
 

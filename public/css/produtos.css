@@ -106,12 +106,14 @@
     padding-top: 75%;
     filter: drop-shadow(0 0 10px #0003);
     perspective: 100px;
-    height:340px;
+    /* max-height:340px; */
     padding-top: 200px;
     margin-bottom: 20px;
   }
   
   .carousel__viewport {
+    /* max-height: 340px; */
+    width: 100%;
     position: absolute;
     top: 0;
     right: 0;
@@ -257,7 +259,7 @@
 
   li img{
     height: 100%;
-    max-width: 2400px;
+    width: 100%;
     object-fit: cover;
   }
   
