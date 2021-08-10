@@ -459,6 +459,18 @@ button{
 
   } 
 }
+a:visited { text-decoration: none; color:black; }
+a:hover { text-decoration: none; color: coral;}
+a:hover, a:active { text-decoration: none; color: coral }
+a { text-decoration: none; }
+.vermais{
+  align-self: flex-end;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+}
 
 /* card */
 

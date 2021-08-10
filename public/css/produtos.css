@@ -1,0 +1,310 @@
+
+   body {
+    /* max-width: 37.5rem; */
+    display: flex;
+    flex-direction: column;
+    /* width: 100vw; */
+    /* height: 100%; */
+    margin: 0 auto;
+    /* padding: 0 1.25rem; */
+    /* font-family: 'Lato', sans-serif; */
+    justify-content: space-evenly;
+    font-size: 16px;
+
+  }
+  main {
+    /* max-width: 37.5rem; */
+    display: flex;
+    flex-direction: row;
+    /* width: 100vw; */
+    /* height: 100%; */
+    /* margin: 0 auto;
+    padding: 0 1.25rem; */
+    font-family: 'Lato', sans-serif;
+    justify-content: space-evenly;
+    font-size: 16px;
+
+  }
+
+  .carousel {
+    background: #EEE;
+    margin-bottom: 20px;
+  }
+  .carousel-cell {
+    width: 100%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    /* counter-increment: gallery-cell; */
+  }
+  /* cell number */
+  .carousel-cell:before {
+    display: block;
+    text-align: center;
+    /* content: counter(gallery-cell); */
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+  .carousel-cell img{
+    width: 100%;
+    height: 100%; 
+  }
+  .filtros{
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    width: 15vw;
+  }
+
+  .Banner-lateral{
+    width: 90%;
+    height: 100vh;
+  }
+
+  .Banner-lateral img{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+
+  }
+
+  .principal{
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+
+  }
+
+  .segundaSecao{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* height: 40%;
+    width: 100%; */
+    justify-content: space-between;
+}
+
+.segundaSecao div{
+    max-width: 280px ;
+    max-height: 420px;
+    /* width: 45%;
+    height: 30%; */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    background: #f2f2f2;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 20px 8px #d0d0d0;
+    margin: 10px 10px;
+}
+.segundaSecao img{
+    text-align: center;
+    height: 67%;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    
+}
+
+
+
+.terceiraSecao{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 40%;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}   
+.terceiraSecao div{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    background: #f2f2f2;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 20px 8px #d0d0d0;
+}
+  .terceiraSecao img{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+.quartaSecao{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-height: 200px;
+    width: 100%;
+    /* width: 100%; */
+    justify-content: space-between;
+}   
+.quartaSecao div{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+.quartaSecao img{
+    height: 90%;
+    width: 90%;
+    margin: auto;
+}
+
+.bottom{
+    margin-bottom: 30px;
+}
+
+div p{
+    margin: 0;
+
+}
+
+.fonteMenor{
+
+    font-size: 12px;
+
+}
+
+.carrouselFlickity{
+  display: flex;
+  flex-direction: row;
+
+}
+
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel2 {
+  background: #EEE;
+  /* margin-top: 20px; */
+}
+
+.carousel-cell2 {
+  width: 100%;
+  height: 90%;
+  /* margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: carousel-cell; */
+ 
+}
+
+.carousel-cell2.is-selected {
+  background: #ED2;
+}
+
+/* cell number */
+/* .carousel-cell2:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+} */
+
+.carousel-cell2-image {
+  display: block;
+  height: 90%;
+  margin: 0 auto;
+  width: 100%;
+  opacity: 0;
+  align-self: center;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell2-image.flickity-lazyloaded,
+.carousel-cell2-image.flickity-lazyerror {
+  opacity: 1;
+}
+
+.carousel-cell-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 28%;
+  height: auto;
+  margin-right: 10px;
+  /* background: white; */
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+  background: #f2f2f2;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 20px 8px #d0d0d0;
+  margin-bottom: 10px;
+  /* margin-bottom: 20px; */
+}
+
+button{
+  border-radius: 15px 15px;
+  background-color: blue;
+  color: white;
+  height: 40px;
+  width: 120px;
+  align-self:center;
+  justify-content: first baseline;
+  /* margin-top: -100px; */
+}
+
+
+@media only screen and (max-width: 768px) {
+  .segundaSecao{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .segundaSecao div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .terceiraSecao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .terceiraSecao div{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .fonteMenor{
+    font-size: 16px;
+
+  } 
+}
+a { color:black } /* Globally */
+
+/* Each state */
+
+a:visited { text-decoration: none; color:black; }
+a:hover { text-decoration: none}
+a:hover, a:active { text-decoration: none; color:black }
+a { text-decoration: none; }
+
+
+
