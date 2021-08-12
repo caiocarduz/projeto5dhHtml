@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <link rel="stylesheet" href="/css/style.css"> -->
-    <link rel="stylesheet" href="/css/header.css" media="screen"> 
-    <link rel="stylesheet" href="/css/footer.css" media="screen"> 
     <link rel="stylesheet" href="/css/estiloCarrinho.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +21,7 @@
         <!-- logica JS para inserir itens -->
         <form action="" id="pagamento">
             <!-- inicio do loop de cards de produto -->
-            <article id="produtoCarrinho" class="metal">
+            <article id="produtoCarrinho">
                 <img src="/img/produtos/Nokia-1100.jpg" alt="Produto" id="fotoProduto">
                 <div id="descricaoCarrinho">
                     Dumbphone Nokia 1100 preto com lanterna e joguinho da cobrinha
@@ -91,44 +88,39 @@
             </section>
             <br><label for="cartalCredito">Cartão de crédito</label>
             <input type="radio" name="cartaoCredito" id="cartaoCredito">
-                <!-- inicio cartao -->
-                <div class="cc">
-  
-                    <h2>Seu Cartão de crédito</h2>
-                    
-                    <span class="provider mastercard">MasterCard</span>
-                    <span class="provider amex">American Express</span>
-                    <span class="provider visa">Visa</span>
-                   
-                    <!-- card number -->
-                    <div class="number">
-                      <input type="text" maxlength="4" placeholder="5280">
-                      <input type="text" maxlength="4">
-                      <input type="text" maxlength="4">
-                      <input type="text" maxlength="4">
-                      <span class="instructions">5280</span>
-                    </div>
-                  
-                    <!-- valid / ccv -->
-                    <div class="date">
-                      <span class="instructions valid">Validade</span>
-                      <input type="text" maxlength="5" placeholder="00/00">
-                      
-                      <span class="instructions valid">Código segurança</span>
-                      <input type="text" maxlength="3" placeholder="123">  
-                    </div>
-                    
-                    <!-- name on card -->
-                    <div class="name">
-                      <input class="full-name" type="text" maxlength="" inputmode='numeric' placeholder="John Doe">
-                      <span class="instructions">Nome impresso</span>
-                    </div>
-                    
-                    <!-- shine -->
-                    <div class="shine"></div>
-                    <div class="shine shine-layer-two"></div>
-                  </div>
-            <!-- fim cartao -->
+                
+            <section id="formaPagamentoContainer">
+
+                
+                <div id="escolhaCredito">
+                <!-- <label for="numeroCartao">Número impresso no Cartão</label> -->
+                <input type="number" name="numeroCartao" id="numeroCartao" placeholder="Número do Cartão"><br>
+                <!-- <label for="nomeCartao">Nome impresso no Cartão</label><br> -->
+                <input type="text" name="nomeCartao" id="nomeCartao" placeholder="Nome impresso no Cartão"><br>
+                <label for="validadeCartao">Validade</label><br>
+                <select name="validadeCartao" id="validadeCartao">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select name="validadeCartaoAno" id="validadeCartaoAno">
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                </select><br>
+                <label for="codSeguranca">Codigo de Segurança</label>
+                <input type="number" name="codSeguranca" id="codSeguranca">
+            </section>
             <section>
                 <label for="Parcelamento">Parcelamento</label>
                 <select name="parcelamento" id="parcelamento">
