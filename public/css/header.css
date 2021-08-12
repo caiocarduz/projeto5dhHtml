@@ -14,14 +14,52 @@ html *
     border-top-right-radius: 10px;
   } */
   
+  .linhaHeader{
+    
+    color: blueviolet;
+    width: 100%;
+    
+  
+  }
+  .neonText {
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #f09,
+      0 0 82px #f09,
+      0 0 92px #f09,
+      0 0 102px #f09,
+      0 0 151px #f09;
+  }
+  /* .neonText {
+    font-size: x-large;
+    color: blueviolet;
+    text-shadow:
+      0 0 7px blueviolet,
+      0 0 10px blue,
+      0 0 21px blueviolet,
+      0 0 42px blue,
+      0 0 82px blueviolet,
+      0 0 92px blue,
+      0 0 102px blueviolet,
+      0 0 151px blue;
+  } */
+  /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Adicionar CSS do Header pra baixo >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+  header{
+    width: 100%;
+    padding-top: 30px;
+    background-color: rgb(27,20,100);
+  }
+
+  
   header > nav{
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: rgb(240, 224, 8); */
-    background-color: #008A7E;
   }
   #headerTop{
     margin-top: 5px;
@@ -34,6 +72,7 @@ html *
   
   }
   #busca{
+    
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -41,26 +80,45 @@ html *
   }
   #lupa{
     height: 30px;
+    
   }
   #submit{
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    background-color: rgb(50, 0, 97);
+    border: none;
+    margin-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+height: 30px;
   }
   #headerLogo{
     height: 150px;
   }
   #headerTop > form > input{
     width: 400px;
-    height: 50px;
-    border-right: none;
+    height: 30px;
+    
+    background-color: rgb(50, 0, 97);
+    
     margin-right: none;
+    border-bottom-right-radius: none;
+    border-top-right-radius: none;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
   }
   #headerTop > form > button{
     height: 54px;
     border-left: none;
     margin-left: none;
-    background-color: white;
+    
+  }
+  .neon{
+    color: white;
+    box-shadow: 0 0 10 blueviolet;
   }
   #headerBot{
   display: flex;
