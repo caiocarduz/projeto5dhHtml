@@ -14,9 +14,9 @@ html *
     border-top-right-radius: 10px;
   } */
   
-  .linhaHeader{
-    
-    color: blueviolet;
+  #linhaHeader{
+    height: 2px;
+    background-color: blueviolet;
     width: 100%;
     
   
@@ -46,7 +46,7 @@ html *
       0 0 102px blueviolet,
       0 0 151px blue;
   } */
-  /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Adicionar CSS do Header pra baixo >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+  
   header{
     width: 100%;
     padding-top: 30px;
@@ -77,15 +77,14 @@ html *
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
-  }
-  #lupa{
-    height: 30px;
     
   }
+  
   #submit{
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: center;
     background-color: rgb(50, 0, 97);
     border: none;
     margin-left: none;
@@ -93,33 +92,98 @@ html *
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
-height: 30px;
+    height: 20px;
+    width: 30px;
+    position: relative;
+    right: 50px;
+  }
+  #headerLogo{
+    height: 150px;
+  }
+  #headerTop > form > input{
+    width: 450px;
+    height: 30px;
+    color: white;
+    font-size: x-large;
+    background-color: rgb(50, 0, 97);
+    padding-left: 10px;
+    margin-right: none;
+    border-radius: 10px;
+  }
+ 
+  .neon{
+    color: white;
+    box-shadow: 0 0 10 blueviolet;
+  }
+  #headerBot{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  }
+  header > nav >div > ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  }
+  
+  header > nav >div > ul > li{
+    list-style: none;
+    
+  
+  }
+  header > nav > div > form > input{
+    height: ;
+  }
+/* consertar aki */
+  #headerSpaceTop{
+    background-color: darkgray;
+    height: 30px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  header > nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #headerTop{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  
+  }
+  #busca{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  #submit{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
   }
   #headerLogo{
     height: 150px;
   }
   #headerTop > form > input{
     width: 400px;
-    height: 30px;
-    
-    background-color: rgb(50, 0, 97);
-    
+    height: 50px;
+    border-right: none;
     margin-right: none;
-    border-bottom-right-radius: none;
-    border-top-right-radius: none;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
   }
-  #headerTop > form > button{
-    height: 54px;
-    border-left: none;
-    margin-left: none;
-    
-  }
-  .neon{
-    color: white;
-    box-shadow: 0 0 10 blueviolet;
-  }
+ 
   #headerBot{
   display: flex;
   flex-wrap: wrap;
