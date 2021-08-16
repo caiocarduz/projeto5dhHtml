@@ -84,7 +84,7 @@
     flex-wrap: wrap;
     /* height: 40%;
     width: 100%; */
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .segundaSecao div{
@@ -121,7 +121,7 @@
   flex-wrap: nowrap;
   height: 40%;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 20px;
 }   
 .terceiraSecao div{
