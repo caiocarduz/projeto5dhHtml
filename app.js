@@ -4,10 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+
+// importando os arquivos de rotas
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var carrinhoRouter = require('./routes/carrinhoRotas')
-
+var RequestLoggerMiddleware = require('./middlewares/RequestLoggerMiddleware')
 var app = express();
 
 // view engine setup
@@ -18,6 +20,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use('/',RequestLoggerMiddleware);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);

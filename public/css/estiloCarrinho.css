@@ -24,7 +24,10 @@
     flex-direction: column;
     align-items: center;
   }
-
+  #cepCarrinho{
+    width: 150px;
+    counter-set:unset ;
+  }
   /* <<<<<<<<<<<<<<<<<<<<<<<< Estilos do Cartao de credito >>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
   #pagamento{
