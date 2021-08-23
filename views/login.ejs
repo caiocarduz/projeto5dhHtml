@@ -18,65 +18,71 @@
 </head>
 <body>
   <%- include("./partials/header") %>
-    <section>
+  
+  <section>
         <h1>Identificação</h1>
     </section>
+    <!-- Area de formularios -->
     <section class="secao-login">
         <div className='sign-in'>
             <h2>Criar Conta</h2>
-            <form class="margem">
+            <!-- fomulario Criar Conta -->
+            <form class="margem" action="/login/createUser" method="POST">
                 <div class='group'>
-                    <input class='form-input'/>
-                      <label
-                        class= 'form-input-label'
-                      > E-mail
-                    </label>
-                  </div>
-            </form>
-            <form class="margem">
-                <div class='group'>
-                    <input class='form-input' type="password"/>
-                      <label
-                        class='form-input-label'
-                      > Senha
-                    </label>
-                  </div>
-            </form>
+                  <input class='form-input' name="email"/>
+                    <label
+                      class= 'form-input-label'
+                    > E-mail
+                  </label>
+                </div>             
+              <div class='group'>
+                <input class='form-input' name="password" type="password"/>
+                  <label
+                    class='form-input-label'
+                  > Senha
+                </label>
+              </div>
+            
             <div class="buttons">
-                <button class="custom-button">
+                <button type='submit'class="custom-button">
                     cadastre-se
                 </button>
             </div>
+          </form>
             
         </div>
         <div className='sign-up'>
+
+          <!-- Formulario de login -->
             <h2>Fazer login</h2>
-            <form class="margem">
+            <form class="margem" action="/login/logUser" method="POST">
                 <div class='group'>
-                    <input class='form-input'/>
+                    <input class='form-input' name="email"/>
                       <label
                         class= 'form-input-label'
                       > E-mail
                     </label>
                   </div>
-            </form>
-            <form class="margem">
+            
                 <div class='group'>
-                    <input class='form-input' type="password"/>
+                    <input class='form-input' name="password" type="password"/>
                       <label
                         class='form-input-label'
                       > Senha
                     </label>
                   </div>
-            </form>
+            
             <div class="buttons">
-                <button class="custom-button">
+                <button class="custom-button" type="submit">
                     Entrar
                 </button>
             </div>
+          </form>
         </div>
 
     </section>
+
+    <!-- area de logins alternativos -->
     <section class="rede-social">
         <div>Use sua rede social para se conectar*</div>
         <div class="buttons facebook">
@@ -90,9 +96,11 @@
             </button>
         </div>
     </section>
+
     <section class="rodape">
         <h5> Nada será publicado em sua timeline. Serviço válido para pessoas físicas. Seu dados pessoais serão respeitados de acordo com a nossa política de privacidade</h5>
     </section>
+   
     <%- include("./partials/footer") %>
 </body>
 <script src="/js/login.js"></script>
