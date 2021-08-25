@@ -1,4 +1,20 @@
-{
- "email": "asd@asd.com",
- "password": "asd"
-}
+[
+    {
+        "nome":"Romulo",
+        "email":"romulo@pig5.com",
+        "senha":1234,
+        "clearence":"admin"
+    },
+    {
+        "nome":"Caio",
+        "email":"caio@pig5.com",
+        "senha":1234,
+        "clearence":"admin"
+    },
+    {
+        "nome":"Seu zé",
+        "email":"seuze@server.com",
+        "senha":4321,
+        "clearence":"usuarioComum"
+    }
+]
