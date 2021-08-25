@@ -16,7 +16,7 @@ module.exports = {
             req.session.user = {nome: user.nome, email: user.email}
             res.send('<h1>logado</h1>')
         } else {
-            res.send('user nao ta retornando true')
+            res.send('user nao existe no banco de dados')
         }
         
         
@@ -29,7 +29,7 @@ module.exports = {
         const user = usuarios.find( user => user.email == email && user.password == password)
         
         if(user){
-            res.send( `este email ja existe `);
+            res.send( `este email ja existe favor fazer login UMA IDEIA é REDIRECIONAR PARA UMA PAGINA ONDE SO TEM O CAMPO DE LOGIN`);
         }else {
             let novoUsuario = {
                 nome:email,
