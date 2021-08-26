@@ -126,7 +126,9 @@
       margin-bottom: 10px;
       
   }
-
+.cardSecaoDois{
+  text-align: center;
+}
   .terceiraSecao{
     display: flex;
     flex-direction: row;

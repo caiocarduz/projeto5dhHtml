@@ -51,7 +51,7 @@
   <section class="terceiraSecao fonteMenor">
     <!-- Adcionando cards do banco cards -->
     <% for(let card of cards1) {%>  
-      <div>
+      <a href="/produtoDetalhes"></a><div>
           <img src="<%= card.caminhoImagem %>" alt="">
           <p> <strong><%= card.nome %></strong> </p>
           <br>
@@ -59,7 +59,7 @@
           <p>Por R$ 3.7680,00 à vista</p>
           <p> ou 10x de R$ 425,00</p>
           <a href="./produtos" class="vermais"> Ver mais</a>
-      </div>
+      </div></a>
     <% } %>
      
   </section>
