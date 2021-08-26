@@ -22,5 +22,17 @@
   "email": "rsalobrena@gmail.com",
   "password": "asdasd",
   "clearance": "usuarioComum"
+ },
+ {
+  "nome": "",
+  "email": "",
+  "password": "",
+  "clearance": "usuarioComum"
+ },
+ {
+  "nome": "asd@asd.com",
+  "email": "asd@asd.com",
+  "password": "asd",
+  "clearance": "usuarioComum"
  }
 ]

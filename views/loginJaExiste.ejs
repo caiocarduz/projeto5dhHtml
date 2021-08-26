@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario ja existe</title>
+    <link rel="stylesheet" href="/css/header.css" media="screen"> 
+    <link rel="stylesheet" href="/css/footer.css" media="screen"> 
+</head>
+<body style="margin: 0; padding: 0;">
+    <%- include("./partials/header") %>
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 100px 0px 100px 0px;">
+        <h1>
+            o email <%= erros.email %> já existe, favor escolher outro email
+        </h1>
+        <h2> <a href="/login">escolher novo email </a></h2>
+    </div>
+    <%- include("./partials/footer") %>
+</body>
+</html>
