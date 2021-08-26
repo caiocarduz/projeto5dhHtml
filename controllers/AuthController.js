@@ -41,7 +41,7 @@ module.exports = {
         
             usuarios.push(novoUsuario)
             // fs.writeFileSync(path.join(__dirname, "../database/usuarios.json"), JSON.stringify(novoUsuario, null, 1));
-             fs.writeFileSync(path.join(__dirname, "../database/usuarios.json"), JSON.stringify(novoUsuario,null,1));
+             fs.writeFileSync(path.join(__dirname, "../database/usuarios.json"), JSON.stringify(usuarios,null,1));
              console.log(user)
              res.send(usuarios)
             }

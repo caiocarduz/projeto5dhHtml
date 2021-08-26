@@ -1,20 +1,26 @@
 [
-    {
-        "nome":"Romulo",
-        "email":"romulo@pig5.com",
-        "senha":1234,
-        "clearence":"admin"
-    },
-    {
-        "nome":"Caio",
-        "email":"caio@pig5.com",
-        "senha":1234,
-        "clearence":"admin"
-    },
-    {
-        "nome":"Seu zé",
-        "email":"seuze@server.com",
-        "senha":4321,
-        "clearence":"usuarioComum"
-    }
+ {
+  "nome": "Romulo",
+  "email": "romulo@pig5.com",
+  "senha": 1234,
+  "clearence": "admin"
+ },
+ {
+  "nome": "Caio",
+  "email": "caio@pig5.com",
+  "senha": 1234,
+  "clearence": "admin"
+ },
+ {
+  "nome": "Seu zé",
+  "email": "seuze@server.com",
+  "senha": 4321,
+  "clearence": "usuarioComum"
+ },
+ {
+  "nome": "rsalobrena@gmail.com",
+  "email": "rsalobrena@gmail.com",
+  "password": "asdasd",
+  "clearance": "usuarioComum"
+ }
 ]
