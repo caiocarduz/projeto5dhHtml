@@ -52,6 +52,7 @@
     height: 100%; 
   }
   .filtros{
+    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content:start;

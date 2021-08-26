@@ -89,7 +89,9 @@
   }
   
   
-
+  p{
+    align-self: center;
+  }
   .segundaSecao{
       display: flex;
       flex-direction: row;

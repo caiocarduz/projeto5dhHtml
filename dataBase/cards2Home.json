@@ -1,0 +1,19 @@
+[
+    {
+        "nome":"Kit Cueca Duomo",
+        "caminhoImagem":"./img/foto_cueca.jpg",
+        "preco": "R$ 200,00"
+    },
+    {
+        "nome":"11 Apple 64GB preto 6,1\" 12 MP IOS ",
+        "caminhoImagem":"./img/celular.jpg"
+    },
+    {
+        "nome":"Vestido festa Junina",
+        "caminhoImagem":"./img/roupas.jpg"
+    },
+    {
+        "nome":"Pratos de louça Carmin ",
+        "caminhoImagem":"./img/pratos.jpg"
+    }
+]

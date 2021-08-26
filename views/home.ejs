@@ -16,9 +16,7 @@
 </head>
 <body>
   <%- include("./partials/header") %>
-    <% if(menssagem) { %>
-      <div style="align-self: center;"> <h1><%= menssagem %></h1></div>
-    <% } %>
+    
   <section class="carousel" aria-label="Gallery">
 
     <div class="carousel" data-flickity>
@@ -37,82 +35,33 @@
   </section> 
 
   <section class="segundaSecao">
+    <% for(let card of cards2) { %>
       <div class="cardSecaoDois">
-          <img src="./img/foto_cueca.jpg" alt="">
-          <p> <strong>11 Apple 64GB preto 6,1" 12 MP IOS </strong> </p>
+          <img src="<%= card.caminhoImagem %>" alt="">
+          <p> <strong><%=card.nome%></strong> </p>
           <br>
-          <p><strike>De R$ 5.780,00</strike></p>
-          <p>Por R$ 3.7680,00 à vista</p>
-          <p> ou 10x de R$ 425,00</p>
+          
+          <p> <%=card.preco%></p>
           <a href="./produtos" class="vermais"> Ver mais</a>
       </div>
-      <div class="cardSecaoDois">
-        <img src="./img/celular.jpg" alt="">
-        <p> <strong>11 Apple 64GB preto 6,1" 12 MP IOS </strong> </p>
-        <br>
-        <p><strike>De R$ 5.780,00</strike></p>
-        <p>Por R$ 3.7680,00 à vista</p>
-        <p> ou 10x de R$ 425,00</p>
-        <a href="./produtos" class="vermais"> Ver mais</a>
-      </div>
-      <div class="cardSecaoDois">
-        <img src="./img/roupas.jpg" alt="">
-        <p> <strong>11 Apple 64GB preto 6,1" 12 MP IOS </strong> </p>
-        <br>
-        <p><strike>De R$ 5.780,00</strike></p>
-        <p>Por R$ 3.7680,00 à vista</p>
-        <p> ou 10x de R$ 425,00</p>
-        <a href="./produtos" class="vermais"> Ver mais</a>
-      </div>
-      <div>
-          <img src="./img/pratos.jpg" alt="">
-          <p> <strong>11 Apple 64GB preto 6,1" 12 MP IOS </strong> </p>
-          <br>
-          <p><strike>De R$ 5.780,00</strike></p>
-          <p>Por R$ 3.7680,00 à vista</p>
-          <p> ou 10x de R$ 425,00</p>
-          <a href="./produtos" class="vermais"> Ver mais</a>
-      </div>
+    <% } %>
+    
   </section>
   <p>Mais Buscados na semana</p>
   <section class="terceiraSecao fonteMenor">
+    <!-- Adcionando cards do banco cards -->
+    <% for(let card of cards1) {%>  
       <div>
-          <img src="./img/redcharlie-d6yiUhX1QCM-unsplash.jpg" alt="">
-          <p> <strong>11 Apple 64GB preto 6,1" 12 MP IOS </strong> </p>
+          <img src="<%= card.caminhoImagem %>" alt="">
+          <p> <strong><%= card.nome %></strong> </p>
           <br>
           <p><strike>De R$ 5.780,00</strike></p>
           <p>Por R$ 3.7680,00 à vista</p>
           <p> ou 10x de R$ 425,00</p>
           <a href="./produtos" class="vermais"> Ver mais</a>
       </div>
-      <div>
-          <img src="./img/redcharlie-d6yiUhX1QCM-unsplash.jpg" alt="">
-          <p> <strong>11 Apple 64GB preto 6,1" 12 MP IOS </strong> </p>
-          <br>
-          <p><strike>De R$ 5.780,00</strike></p>
-          <p>Por R$ 3.7680,00 à vista</p>
-          <p> ou 10x de R$ 425,00</p>
-          <a href="./produtos" class="vermais"> Ver mais</a>
-      </div>
-      <div>
-          <img src="./img/redcharlie-d6yiUhX1QCM-unsplash.jpg" alt="">
-          <p> <strong>11 Apple 64GB preto 6,1" 12 MP IOS </strong> </p>
-          <br>
-          <p><strike>De R$ 5.780,00</strike></p>
-          <p>Por R$ 3.7680,00 à vista</p>
-          <p> ou 10x de R$ 425,00</p>
-          <a href="./produtos" class="vermais"> Ver mais</a>
-      </div>
-      <div>
-          <img src="./img/redcharlie-d6yiUhX1QCM-unsplash.jpg" alt="">
-          <p> <strong>11 Apple 64GB preto 6,1" 12 MP IOS </strong> </p>
-          <br>
-          <p><strike>De R$ 5.780,00</strike></p>
-          <p>Por R$ 3.7680,00 à vista</p>
-          <p> ou 10x de R$ 425,00</p>
-          <a href="./produtos" class="vermais"> Ver mais</a>
-      </div>
-
+    <% } %>
+     
   </section>
 
   <section class= 'quartaSecao'>

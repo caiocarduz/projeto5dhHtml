@@ -24,14 +24,26 @@
   "clearance": "usuarioComum"
  },
  {
+  "nome": "asd@asd.com",
+  "email": "asd@asd.com",
+  "password": "asd",
+  "clearance": "usuarioComum"
+ },
+ {
+  "nome": "leonardo@pizzariafantastica.com",
+  "email": "leonardo@pizzariafantastica.com",
+  "password": "tartaruga",
+  "clearance": "usuarioComum"
+ },
+ {
   "nome": "",
   "email": "",
   "password": "",
   "clearance": "usuarioComum"
  },
  {
-  "nome": "asd@asd.com",
-  "email": "asd@asd.com",
+  "nome": "asd",
+  "email": "asd",
   "password": "asd",
   "clearance": "usuarioComum"
  }

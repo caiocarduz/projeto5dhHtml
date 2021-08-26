@@ -55,7 +55,7 @@ module.exports = {
             // fs.writeFileSync(path.join(__dirname, "../database/usuarios.json"), JSON.stringify(novoUsuario, null, 1));
              fs.writeFileSync(path.join(__dirname, "../database/usuarios.json"), JSON.stringify(usuarios,null,1));
              console.log(user)
-             res.render('/', {menssagem:"Usuario criado corretamente"})
+             res.render('produtos', {menssagem:"Usuario criado corretamente"})
             }
 
         
