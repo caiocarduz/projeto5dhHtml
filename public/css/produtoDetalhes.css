@@ -5,3 +5,98 @@
     font-family: sans-serif;
     
 }
+
+main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tipoProduto{
+    width: 100%;
+    padding-left: 100px ;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#detalhes{
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    width: 49%;
+    margin-bottom: 10px;
+    align-items: center;
+}
+#produto{
+    width: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+#imagemProduto{
+    align-self: center;
+    width: 300px;
+    height: 300px;
+
+}
+#rate{
+    font-size: xx-large;
+margin-bottom: 30px;
+}
+#descricao{
+    width: 100%;
+    text-align: justify;
+    font-weight: bold;
+}
+#preco{
+    /* margin-top: 50px; */
+    width: 48%;
+    align-self: center;
+}
+#comprar{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightblue;
+    color: white;
+    width:28%;
+    height: 70px;
+    font-size: xx-large;
+    align-items: center;
+    justify-content: center;
+    
+}
+#fichaTecnica{
+    display: flex;
+    flex-wrap: wrap;
+    
+    width: 100%;
+    margin-top: 30px;
+    align-self: center;
+    justify-content: center;
+}
+#texto{
+    width: 60%;
+}
+#Sessaocomentarios{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    width: 100%;
+    margin-top: 30px;
+    align-self: center;
+    justify-content: center;
+}
+#comentarios{
+    width: 60%;
+}
+#avatarComentario{
+    width: 10%;
+
+}
+#comentario{
+    width: 80%;
+}
