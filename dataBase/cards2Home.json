@@ -19,5 +19,47 @@
         "nome":"6 Pratos de louça Carmim",
         "caminhoImagem":"./img/pratos.jpg",
         "preco": "R$ 113,49"
+    },
+    {
+        "nome":"Kit Cueca Duomo c/10",
+        "caminhoImagem":"./img/foto_cueca.jpg",
+        "preco": "R$ 200,00"
+    },
+    {
+        "nome":"11 Apple 64GB preto 6,1\" 12 MP IOS ",
+        "caminhoImagem":"./img/celular.jpg",
+        "preco": "R$ 5.320,50"
+        
+    },
+    {
+        "nome":"Vestido festa Junina",
+        "caminhoImagem":"./img/roupas.jpg",
+        "preco": "R$ 119,99"
+    },
+    {
+        "nome":"6 Pratos de louça Carmim",
+        "caminhoImagem":"./img/pratos.jpg",
+        "preco": "R$ 113,49"
+    },
+    {
+        "nome":"Kit Cueca Duomo c/10",
+        "caminhoImagem":"./img/foto_cueca.jpg",
+        "preco": "R$ 200,00"
+    },
+    {
+        "nome":"11 Apple 64GB preto 6,1\" 12 MP IOS ",
+        "caminhoImagem":"./img/celular.jpg",
+        "preco": "R$ 5.320,50"
+        
+    },
+    {
+        "nome":"Vestido festa Junina",
+        "caminhoImagem":"./img/roupas.jpg",
+        "preco": "R$ 119,99"
+    },
+    {
+        "nome":"6 Pratos de louça Carmim",
+        "caminhoImagem":"./img/pratos.jpg",
+        "preco": "R$ 113,49"
     }
 ]

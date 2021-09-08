@@ -24,13 +24,26 @@
     flex-direction: column;
     align-items: center;
   }
-  #cepCarrinho{
+  .inputPadrao{
     width: 150px;
-    /* counter-set:unset ; */
     border: none;
+    height: 30px;
+    background-color: antiquewhite;
+    font-size: larger;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   /* <<<<<<<<<<<<<<<<<<<<<<<< Estilos do Cartao de credito >>>>>>>>>>>>>>>>>>>>>>>>>>> */
-
+ #pagar{
+  width: 210px;
+  height: 80px;
+  color:#ace4fa;
+  background-color: #0e306e;
+  font-size: x-large;
+  font-weight: bolder;
+  border: none;
+  border-radius: 15px;
+ }
   #pagamento{
     margin-top: 50px;
     padding: 50px;
@@ -43,7 +56,7 @@
       justify-content: space-between;
   }
   #carrinhoContainer{
-    background-color: lightcyan;
+    background-color: white;
       padding-top: 50px;
       width: 100%;
       display: flex;
@@ -73,6 +86,7 @@
         background-color: #174395;
         border: 1 solid #174395 ;
         width: 100px;
+        border-radius: 50px;
     }
     #descricaoCarrinho{
         width: 300px;
@@ -148,7 +162,7 @@
     margin-top: 25px;
   }
   
-  
+ 
   /* <<<<<<<<   css do cartao     >>>>>>>>>>> */
   @import url(https://fonts.googleapis.com/css?family=Anaheim);
   @import url(https://fonts.googleapis.com/css?family=Inconsolata);
@@ -224,7 +238,7 @@
   .amex { background-position: 71px 0; }
   .visa { background-position: 147px 0; }
   
-   input{ 
+   .number > input{ 
     background: #ececec; 
     border: 0;
     border-radius: 4px;
@@ -242,6 +256,19 @@
   }
   
   .date input {
+    background: #ececec; 
+    border: 0;
+    border-radius: 4px;
+    font: 20px Inconsolata, sans-serif; color: #303030;
+    margin: 0 2px 3px 0;
+    padding: 8px 10px;
+    text-align: center;
+    width: 18%; 
+      -moz-box-shadow:    1px 1px 0px 1px #0e306e;
+      -webkit-box-shadow: 1px 1px 0px 1px #0e306e;
+      box-shadow:         1px 1px 0px 1px #0e306e;
+    position: relative;
+    z-index: 10;
     margin-right: space;
   }
   
@@ -252,6 +279,19 @@
   }
   
   .full-name {
+    background: #ececec; 
+    border: 0;
+    border-radius: 4px;
+    font: 20px Inconsolata, sans-serif; color: #303030;
+    margin: 0 2px 3px 0;
+    padding: 8px 10px;
+    text-align: center;
+    width: 18%; 
+      -moz-box-shadow:    1px 1px 0px 1px #0e306e;
+      -webkit-box-shadow: 1px 1px 0px 1px #0e306e;
+      box-shadow:         1px 1px 0px 1px #0e306e;
+    position: relative;
+    z-index: 10;
     width: 90%;
     text-align: left;
   }

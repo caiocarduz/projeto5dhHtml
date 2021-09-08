@@ -10,6 +10,7 @@ module.exports = {
         console.log('entrou na requisicao')
         const { email, password } = req.body;
         console.log( email, password)
+        const SenhaHash = bcrypt.hashSync(password, saltRounds)
         try {
             validationResult(req).throw();
             // Oh look at ma' success! All validations passed!
@@ -19,7 +20,7 @@ module.exports = {
             //se tiver erros manda de volta o erro
             res.send(erros)
         }
-        const usuario = usuarios.find( usuario => usuario.email == email && usuario.password == password)
+        const usuario = usuarios.find( u => u.email == email && u.password == SenhaHash)
         console.log(usuario)
         if(usuario != undefined){
             req.session.usuario = {nome: usuario.nome, email: usuario.email}
@@ -36,6 +37,7 @@ module.exports = {
     
         const erros = validationResult(req);
         const { email, password } = req.body;
+        const SenhaHash = bcrypt.hashSync(password, saltRounds)
         console.log(password)
         console.log(email)
         const user = usuarios.find( user => user.email == email && user.password == password)
@@ -46,7 +48,7 @@ module.exports = {
             let novoUsuario = {
                 nome:email,
                 email:email,
-                password: password,
+                password: SenhaHash,
                 clearance: "usuarioComum"
             }
 
