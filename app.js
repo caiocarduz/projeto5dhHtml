@@ -3,8 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var session = require('express-session')
-
+var expressSession= require('express-session')
+const auth = require('./middlewares/auth');
 // importando os arquivos de rotas
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -21,14 +21,18 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(session({secret:"fraseSegura"}))
+app.use(expressSession({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true
+}));
 app.use('/',RequestLoggerMiddleware);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/carrinho', carrinhoRouter)
-app.use('/login', loginRouter)
+app.use('/', loginRouter)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

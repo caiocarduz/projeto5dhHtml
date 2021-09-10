@@ -4,6 +4,8 @@ const fs= require('fs')
 const usuarios = require('../dataBase/usuarios.json')
 const { validationResult } = require('express-validator')
 const path = require('path');
+const cards1 = require('../dataBase/cardsHome.json')
+const cards2 = require('../dataBase/cards2Home.json')
 
 module.exports = {
     logUser:  (req, res) => {
@@ -20,16 +22,24 @@ module.exports = {
             res.redirect("/login?error=1")
         }
         const usuario = usuarios.find( u => u.email == email)
-        req.session.logged_user = usuario
-        console.log(usuario)
+        req.session.user = usuario
+        console.log(req.session.user)
+        req.session.save();
         if(typeof(usuario) === "undefined"){
             res.redirect("/login?error=usuarioInixistente")
             
         } else  if (!bcrypt.compareSync(password , usuario.password)){
             res.redirect("/login?error=senhaIncorreta")
         } else{
-            res.redirect("/home")
+            res.redirect("/user")
         }
+    },
+
+    userView: (req, res, next) =>{
+        console.log(req.session.user)
+        res.render('home', {cards1, cards2, logged_user : req.session.user})
+        
+
     },
     createUser:  (req, res) => {
         
