@@ -17,19 +17,18 @@ module.exports = {
             console.log(err.mapped()); // Oh noes!
             const erros = validationResult(req);
             //se tiver erros manda de volta o erro
-            res.send(erros)
+            res.redirect("/login?error=1")
         }
         const usuario = usuarios.find( u => u.email == email)
         req.session.logged_user = usuario
         console.log(usuario)
-        if(typeof(usuario) === undefined){
-            res.send("usuario inexistente")
+        if(typeof(usuario) === "undefined"){
+            res.redirect("/login?error=usuarioInixistente")
             
-        } 
-        if (!bcrypt.compareSync(password , usuario.password)){
-            res.send("senha incorreta")
+        } else  if (!bcrypt.compareSync(password , usuario.password)){
+            res.redirect("/login?error=senhaIncorreta")
         } else{
-            res.send("usuario logado")
+            res.redirect("/home")
         }
     },
     createUser:  (req, res) => {
