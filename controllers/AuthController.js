@@ -31,16 +31,20 @@ module.exports = {
         } else  if (!bcrypt.compareSync(password , usuario.password)){
             res.redirect("/login?error=senhaIncorreta")
         } else{
-            res.redirect("/user")
+            res.redirect("/home")
         }
     },
 
-    userView: (req, res, next) =>{
-        console.log(req.session.user)
-        res.render('home', {cards1, cards2, logged_user : req.session.user})
-        
+    logout: (req, res) =>{
+        req.session.destroy();
+        res.redirect("/home")
 
     },
+
+    // userView: (req, res, next) =>{
+    //     console.log(req.session.user)
+    //     res.render('home', {cards1, cards2, logged_user : req.session.user})
+    // },
     createUser:  (req, res) => {
         
     

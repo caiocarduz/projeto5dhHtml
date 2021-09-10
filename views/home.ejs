@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/css/footer.css" media="screen"> 
 </head>
 <body>
-  <%- include("./partials/header") %>
+  <%- include("./partials/header"); %>
     
   <section class="carousel" aria-label="Gallery">
 
@@ -42,7 +42,7 @@
           <br>
           
           <p> <%=card.preco%></p>
-          <a href="./produtos" class="vermais"> Ver mais</a>
+          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
       </div>
     <% } %>
     
@@ -51,14 +51,14 @@
   <section class="terceiraSecao fonteMenor">
     <!-- Adcionando cards do banco cards -->
     <% for(let card of cards1) {%>  
-      <a href="/produtoDetalhes"></a><div>
+      <a href="./produtodetalhes"></a><div>
           <img src="<%= card.caminhoImagem %>" alt="">
           <p> <strong><%= card.nome %></strong> </p>
           <br>
           <p><strike>De R$ 5.780,00</strike></p>
           <p>Por R$ 3.7680,00 à vista</p>
           <p> ou 10x de R$ 425,00</p>
-          <a href="./produtos" class="vermais"> Ver mais</a>
+          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
       </div></a>
     <% } %>
      
@@ -82,7 +82,7 @@
           <p><strike>De R$ 5.780,00</strike></p>
           <p>Por R$ 3.7680,00 à vista</p>
           <p> ou 10x de R$ 425,00</p>
-          <a href="./produtos" class="vermais"> Ver mais</a>
+          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
       </div>
       <div class="carousel-cell-container" >
           <div class="carousel-cell2">
@@ -93,7 +93,7 @@
           <p><strike>De R$ 5.780,00</strike></p>
           <p>Por R$ 3.7680,00 à vista</p>
           <p> ou 10x de R$ 425,00</p>
-          <a href="./produtos" class="vermais"> Ver mais</a>
+          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
       </div>
     <div class="carousel-cell-container" >
           <div class="carousel-cell2">
@@ -104,7 +104,7 @@
           <p><strike>De R$ 5.780,00</strike></p>
           <p>Por R$ 3.7680,00 à vista</p>
           <p> ou 10x de R$ 425,00</p>
-          <a href="./produtos" class="vermais"> Ver mais</a>
+          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
     </div>
     <div class="carousel-cell-container" >
           <div class="carousel-cell2">
@@ -115,7 +115,7 @@
           <p><strike>De R$ 5.780,00</strike></p>
           <p>Por R$ 3.7680,00 à vista</p>
           <p> ou 10x de R$ 425,00</p>
-          <a href="./produtos" class="vermais"> Ver mais</a>
+          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
     </div>
     <div class="carousel-cell-container" >
           <div class="carousel-cell2">
@@ -126,7 +126,7 @@
           <p><strike>De R$ 5.780,00</strike></p>
           <p>Por R$ 3.7680,00 à vista</p>
           <p> ou 10x de R$ 425,00</p>
-          <a href="./produtos" class="vermais"> Ver mais</a>
+          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
     </div>
     <div class="carousel-cell-container" >
           <div class="carousel-cell2">
@@ -137,7 +137,7 @@
           <p><strike>De R$ 5.780,00</strike></p>
           <p>Por R$ 3.7680,00 à vista</p>
           <p> ou 10x de R$ 425,00</p>
-          <a href="./produtos" class="vermais"> Ver mais</a>
+          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
     </div>
   
   </div>

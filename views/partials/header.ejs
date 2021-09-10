@@ -12,7 +12,14 @@
                 <img src="/img/iconesHeader/favoritos.png" alt="" style="width:40px; margin-right: 20px;">
                 <a href="/carrinho"><img src="/img/iconesHeader/Sacola.png" alt="" style="width:40px; margin-right: 20px;"></a>
                 
-            <a id="neonText" href="/login"> Login / Entrar</a>
+            <a> 
+                <% if (typeof(logged_user) != "undefined") { %>
+                    <a> <%= logged_user.nome %> </a>
+                    <a href="/logout">Logout</a>
+                <% } else { %>
+                    <a id="neonText" href="/login"> login/entrar</a>
+                <% } %>
+            </a>
             </div>
         </div><br>
         <div id="headerBot">

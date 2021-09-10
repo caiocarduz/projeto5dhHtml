@@ -12,5 +12,5 @@ router.get('/home', indexController.home);
 router.get('/produtos', indexController.produtos)
 router.get('/login', indexController.login)
 router.get('/carrinho', carrinhoController.carrinho);
-router.get('/produtoDetalhes', produtoDetalhes.detalhes)
+router.get('/produtodetalhes', indexController.produtoDetalhes)
 module.exports = router;
