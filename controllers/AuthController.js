@@ -10,7 +10,6 @@ module.exports = {
         console.log('entrou na requisicao')
         const { email, password } = req.body;
         console.log( email, password)
-        const SenhaHash = bcrypt.hashSync(password, saltRounds)
         try {
             validationResult(req).throw();
             // Oh look at ma' success! All validations passed!
@@ -20,17 +19,18 @@ module.exports = {
             //se tiver erros manda de volta o erro
             res.send(erros)
         }
-        const usuario = usuarios.find( u => u.email == email && u.password == SenhaHash)
+        const usuario = usuarios.find( u => u.email == email)
+        req.session.logged_user = usuario
         console.log(usuario)
-        if(usuario != undefined){
-            req.session.usuario = {nome: usuario.nome, email: usuario.email}
-            res.send('<h1>logado</h1>')
-        } else {
-            res.send('user nao existe no banco de dados')
+        if(typeof(usuario) === undefined){
+            res.send("usuario inexistente")
+            
+        } 
+        if (!bcrypt.compareSync(password , usuario.password)){
+            res.send("senha incorreta")
+        } else{
+            res.send("usuario logado")
         }
-        
-        
-
     },
     createUser:  (req, res) => {
         
