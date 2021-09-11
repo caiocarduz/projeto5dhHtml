@@ -82,5 +82,53 @@
   "email": "caio.carduz@gmail.com",
   "password": "$2b$10$Huoh.azcqTJW8NyTAC./..aPSfYW2j/ycH3.sAGAE2jJu7qZcZ7Z6",
   "clearance": "usuarioComum"
+ },
+ {
+  "nome": "matheus@yahoo.com",
+  "email": "matheus@yahoo.com",
+  "password": "$2b$10$9joa0PuiJVO3R2zX8k24Uegg3St7Z08I5DcFtd3GmQaVqAnhDycaK",
+  "clearance": "usuarioComum"
+ },
+ {
+  "nome": "van@bol.com",
+  "email": "van@bol.com",
+  "password": "$2b$10$xLONlDa9fm.6iScRCMMMKOg9aY3IWVm3PmcP9zFcm5Y/q8LVZjqW2",
+  "clearance": "usuarioComum"
+ },
+ {
+  "nome": "cv@uol.com",
+  "email": "cv@uol.com",
+  "password": "$2b$10$QGN6z.1WdtCkODAwxWsMvuPt63in0IITugmgRbnAqWySsM1.kooCe",
+  "clearance": "usuarioComum"
+ },
+ {
+  "nome": "vc@uol.com",
+  "email": "vc@uol.com",
+  "password": "$2b$10$R/8x/jZRjDzwcJu8S6136uS9SAcfX4saSxDWJbviUns4UDtIupWGi",
+  "clearance": "usuarioComum"
+ },
+ {
+  "nome": "vc@uol.com",
+  "email": "vc@uol.com",
+  "password": "$2b$10$ZQdoL1Bfb6Yu3X3C2svJ2.vy9uBwP1OTTG/BmRRAjpZzKZ3jxYHvW",
+  "clearance": "usuarioComum"
+ },
+ {
+  "nome": "vc@uol.com",
+  "email": "vc@uol.com",
+  "password": "$2b$10$pFjO.vMODjCxeVffhOA2g.RfsrrbHvUU.jlgMMuJbyYNhw6MkNh.2",
+  "clearance": "usuarioComum"
+ },
+ {
+  "nome": "vc@uol.com",
+  "email": "vc@uol.com",
+  "password": "$2b$10$xVAZwIelnzgvcNxEybBdlOZnHG8HaXbGS24AFc0gfcV4e/SOAp/Li",
+  "clearance": "usuarioComum"
+ },
+ {
+  "nome": "vc@uol.com",
+  "email": "vc@uol.com",
+  "password": "$2b$10$VwvtjB3SKhuCoKEsE5Vgeet5qX6fnm0QV0SgLTRSdEzYobENwRryS",
+  "clearance": "usuarioComum"
  }
 ]

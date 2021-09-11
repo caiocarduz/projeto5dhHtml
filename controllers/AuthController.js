@@ -26,7 +26,7 @@ module.exports = {
         console.log(req.session.user)
         req.session.save();
         if(typeof(usuario) === "undefined"){
-            res.redirect("/login?error=usuarioInixistente")
+            res.redirect("/login?error=usuarioInexistente")
             
         } else  if (!bcrypt.compareSync(password , usuario.password)){
             res.redirect("/login?error=senhaIncorreta")
@@ -54,9 +54,18 @@ module.exports = {
         console.log(password)
         console.log(email)
         const user = usuarios.find( user => user.email == email && user.password == password)
+        console.log(user)
+        req.session.user = {
+            nome: email,
+            email: email,
+            senha: SenhaHash,
+            clearence: "usuarioComum"
+        }
+        console.log(req.session.user)
+        req.session.save();
         
-        if(user){
-            res.render('loginJaExiste', {erros});
+        if(typeof(user) !== undefined){
+            res.redirect("/login?error=usuariojaexiste")
         }else {
             let novoUsuario = {
                 nome:email,
@@ -70,7 +79,7 @@ module.exports = {
             // fs.writeFileSync(path.join(__dirname, "../database/usuarios.json"), JSON.stringify(novoUsuario, null, 1));
              fs.writeFileSync(path.join(__dirname, "../database/usuarios.json"), JSON.stringify(usuarios,null,1));
              console.log(user)
-             res.render('produtos', {menssagem:"Usuario criado corretamente"})
+             res.redirect('/home')
             }
 
         
