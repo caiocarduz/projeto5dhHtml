@@ -1,9 +1,8 @@
-*{
-    margin:  0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    
+html
+{
+  /* font-size: 1em !important; */
+  /* color: #000 !important; */
+  font-family: 'MontSerrat', sans-serif !important;
 }
 
 main{

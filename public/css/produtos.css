@@ -12,6 +12,15 @@
     font-size: 16px;
 
   }
+
+  html
+{
+  /* font-size: 1em !important; */
+  /* color: #000 !important; */
+  font-family: 'MontSerrat', sans-serif !important;
+}
+
+
   main {
     /* max-width: 37.5rem; */
     display: flex;

@@ -43,6 +43,14 @@
     }
   }
    */
+
+   html
+   {
+     /* font-size: 1em !important; */
+     /* color: #000 !important; */
+     font-family: 'MontSerrat', sans-serif !important;
+   }
+   
   body {
     /* max-width: 37.5rem; */
     display: flex;
@@ -93,6 +101,10 @@
   p{
     align-self: flex-start;
     margin-left: 20px;
+  }
+
+  .divisaoSecao{
+    margin-left: 50px;
   }
   .segundaSecao{
       display: flex;

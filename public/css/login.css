@@ -8,17 +8,24 @@ body{
     justify-content: center;
 }
 
+html
+{
+  /* font-size: 1em !important; */
+  /* color: #000 !important; */
+  font-family: 'MontSerrat', sans-serif !important;
+}
+
 
 
 .sign-in {
     width: 150px;
     display: flex;
     flex-direction: column;
-    margin-right: 30px;
+    margin-right: 40px;
 }
 
 .margem{
-    margin-right: 30px;
+    margin-right: 40px;
 }
   
 .title {
@@ -50,6 +57,7 @@ body{
   
 input[type='password'] {
     letter-spacing: 0.3em;
+    transition: 0ms;
 }
 
 .form-input-label {
@@ -60,7 +68,7 @@ input[type='password'] {
     pointer-events: none;
     left: 5px;
     top: 10px;
-    transition: 300ms ease all;
+    transition: 1ms ease all;
 
 }
 
@@ -77,10 +85,9 @@ letter-spacing: 0.5px;
 line-height: 50px;
 padding: 0 35px 0 35px;
 font-size: 15px;
-background-color:orangered;
+background-color: rgb(27,20,100);
 color: white;
 text-transform: uppercase;
-font-family: 'Open Sans Condensed';
 font-weight: bolder;
 border: none;
 cursor: pointer;
@@ -127,29 +134,53 @@ section h1{
 
 }
 
-.botao-rede-social{
+.rede-social div{
+    margin-right: 20px;
+}
+
+.botao-rede-social-facebook{
     margin-top: 20px;
     margin-bottom: 20px;
     min-width: auto;
     width: auto;
-    height: 50px;
+    height: 40px;
     letter-spacing: 0.5px;
-    line-height: 50px;
+    line-height: 40px;
     padding: 0 35px 0 35px;
     font-size: 15px;
-    background-color: white;
-    border: 1px solid black;
+    background-color:#4267B2;
+    border: 1px solid #4267B2;
     color: black;
     text-transform: uppercase;
-    font-family: 'Open Sans Condensed';
     font-weight: bolder;
     cursor: pointer;
 
 
 }
 
+.botao-rede-social-google{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-width: auto;
+    width: auto;
+    height: 40px;
+    letter-spacing: 0.5px;
+    line-height: 40px;
+    padding: 0 35px 0 35px;
+    font-size: 15px;
+    background-color:#dd4b39;
+    border: 1px solid #dd4b39;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+    cursor: pointer;
+
+
+}
+
+
 .facebook{
-    margin-right: 30px;
+    margin-right: 40px;
 }
 
 .rodape{

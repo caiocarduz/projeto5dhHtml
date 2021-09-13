@@ -1,3 +1,10 @@
+html
+{
+  /* font-size: 1em !important; */
+  /* color: #000 !important; */
+  font-family: 'MontSerrat', sans-serif !important;
+}
+
 /* Adcionar CSS do footer para baixo */
 footer{padding-top: 30px;
     display: flex;
@@ -5,7 +12,15 @@ footer{padding-top: 30px;
     align-items: center;
     /* background-color:rgb(50, 50, 50); */
     color:white;
-    background-color: rgb(27,20,100);
+    /* background-color: rgb(27,20,100); */
+    background: rgb(27,20,100);
+    background: -moz-linear-gradient(-45deg, rgb(27,20,100) 0%, rgba(65,103,168,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgb(27,20,100)), color-stop(100%, rgba(65,103,168,1)));
+    background: -webkit-linear-gradient(-45deg, rgb(27,20,100) 0%, rgba(65,103,168,1) 100%);
+    background: -o-linear-gradient(-45deg, rgb(27,20,100) 0%, rgba(65,103,168,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgb(27,20,100) 0%, rgba(65,103,168,1) 100%);
+    background: linear-gradient(135deg, rgb(27,20,100) 0%, rgba(65,103,168,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9a39a3', endColorstr='#4167a8', GradientType=1 );
   }
   footer > section{
     width: 100%;
@@ -18,12 +33,17 @@ footer{padding-top: 30px;
     padding-bottom: 30px;
   }
   footer > section > article{
-    width: 20%;
+    width: 25%;
   }
   .atendimento{
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
+  }
+
+  p{
+    margin-left: 0px;
+    margin-top: 10px;
   }
  
   #icones{
