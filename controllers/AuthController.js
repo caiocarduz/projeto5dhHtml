@@ -22,15 +22,20 @@ module.exports = {
             res.redirect("/login?error=1")
         }
         const usuario = usuarios.find( u => u.email == email)
-        req.session.user = usuario
-        console.log(req.session.user)
-        req.session.save();
+        // req.session.user = usuario
+        // req.session.save();
+        // console.log(req.session.user)
         if(typeof(usuario) === "undefined"){
+            // req.session.destroy();
             res.redirect("/login?error=usuarioInexistente")
             
         } else  if (!bcrypt.compareSync(password , usuario.password)){
+            // req.session.destroy();
             res.redirect("/login?error=senhaIncorreta")
         } else{
+            req.session.user = usuario
+            req.session.save();
+            console.log(req.session.user)
             res.redirect("/home")
         }
     },
