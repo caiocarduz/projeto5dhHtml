@@ -2,17 +2,18 @@ const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const fs= require('fs')
 const usuarios = require('../dataBase/usuarios.json')
-const { validationResult } = require('express-validator')
+const { body, validationResult } = require('express-validator');
 const path = require('path');
 const cards1 = require('../dataBase/cardsHome.json')
 const cards2 = require('../dataBase/cards2Home.json')
+
 
 module.exports = {
     logUser:  (req, res) => {
         console.log('entrou na requisicao')
         const { email, password } = req.body;
         console.log( email, password)
-        try {
+      /*   try {
             validationResult(req).throw();
             // Oh look at ma' success! All validations passed!
         } catch (err) {
@@ -21,10 +22,19 @@ module.exports = {
             //se tiver erros manda de volta o erro
             res.redirect("/login?error=1")
         }
+ */
+        const listaDeErrors = validationResult(req);
+        if (!listaDeErrors.isEmpty()) {
+          /*   req.flash('errors', errors.array())
+            console.log(errors) */
+            res.render('login', {errors: listaDeErrors.errors});
+        }
+
         const usuario = usuarios.find( u => u.email == email)
         // req.session.user = usuario
         // req.session.save();
         // console.log(req.session.user)
+
         if(typeof(usuario) === "undefined"){
             // req.session.destroy();
             res.redirect("/login?error=usuarioInexistente")
@@ -52,24 +62,15 @@ module.exports = {
     // },
     createUser:  (req, res) => {
         
-    
-        const erros = validationResult(req);
+
         const { email, password } = req.body;
-        const SenhaHash = bcrypt.hashSync(password, saltRounds)
-        console.log(password)
-        console.log(email)
-        const user = usuarios.find( user => user.email == email && user.password == password)
-        console.log(user)
-        req.session.user = {
-            nome: email,
-            email: email,
-            senha: SenhaHash,
-            clearence: "usuarioComum"
+        const listaDeErrors = validationResult(req);
+        if (!listaDeErrors.isEmpty()) {
+            res.render('login', {errors1: listaDeErrors.errors});
         }
-        console.log(req.session.user)
-        req.session.save();
-        
-        if(typeof(user) !== "undefined"){
+        const SenhaHash = bcrypt.hashSync(password, saltRounds)
+        const usuario = usuarios.find( user => user.email == email)
+        if(typeof(usuario) !== "undefined"){
             res.redirect("/login?error=usuariojaexiste")
         }else {
             let novoUsuario = {
@@ -79,12 +80,13 @@ module.exports = {
                 clearance: "usuarioComum"
             }
 
-        
             usuarios.push(novoUsuario)
             // fs.writeFileSync(path.join(__dirname, "../database/usuarios.json"), JSON.stringify(novoUsuario, null, 1));
-             fs.writeFileSync(path.join(__dirname, "../database/usuarios.json"), JSON.stringify(usuarios,null,1));
-             console.log(user)
-             res.redirect('/home')
+            fs.writeFileSync(path.join(__dirname, "../database/usuarios.json"), JSON.stringify(usuarios,null,1));
+            const usuario = usuarios.find( user => user.email == email)
+            req.session.user = usuario
+            console.log(req.session.user)
+            res.redirect('/home')
             }
 
         

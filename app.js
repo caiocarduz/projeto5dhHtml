@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var expressSession= require('express-session')
+const flash = require("express-flash");
 // importando os arquivos de rotas
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -25,6 +26,7 @@ app.use(expressSession({
   resave: false,
   saveUninitialized: true
 }));
+app.use(flash());
 app.use('/',RequestLoggerMiddleware);
 app.use(express.static(path.join(__dirname, 'public')));
 

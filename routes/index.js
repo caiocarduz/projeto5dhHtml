@@ -4,6 +4,7 @@ var router = express.Router();
 var indexController = require('../controllers/indexController')
 var carrinhoController = require('../controllers/carrinhoController')
 var produtoDetalhes = require('../controllers/produtoDetalhes')
+const { body, validationResult } = require('express-validator')
 
 /* GET home page. */
 router.get('/', indexController.home);

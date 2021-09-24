@@ -28,6 +28,15 @@
     <section class="secao-login">
         <div className='sign-in'>
             <h2>Criar Conta</h2>
+            <% if(typeof(errors1) != "undefined"){ %>
+              <ul>
+                <% errors1.forEach((error) => { %>
+
+                  <li><%= error.msg %></li>
+
+                 <% }) %>
+              </ul>
+            <% } %>
             <!-- fomulario Criar Conta -->
             <form class="margem" action="/createUser" method="POST">
                 <div class='group'>
@@ -50,9 +59,9 @@
                     cadastre-se
                 </button>
             </div>
-          </form>
-            
+          </form>      
         </div>
+        <div id="messages" class="text-center">
         <div className='sign-up'>
 
           <!-- Formulario de login -->
@@ -68,6 +77,7 @@
             
                 <div class='group'>
                   <input class='form-input' name="password" type="password"/>
+
                     <label
                       class='form-input-label'
                     > Senha
@@ -80,6 +90,25 @@
               </button>
             </div>
           </form>
+          <div id="messages" class="text-center">
+          <% if(typeof(errors) != "undefined"){ %>
+                <ul>
+                  <% errors.forEach((error) => { %>
+
+                    <li><%= error.msg %></li>
+
+                   <% }) %>
+                </ul>
+            <% } %>
+        <!--   <% Object.keys(messages).forEach(function (type) { %>
+              <% messages[type].forEach(function (message) { %>
+                  <% if (type === 'errors') {%>
+                      <div class="alert alert-<%= type %>"><%= message.msg %></div>
+                  <%} else { %>
+                      <div class="alert alert-<%= type %>"><%= message %></div>
+                  <% } %>
+              <% }) %>
+          <% }) %> -->
         </div>
 
     </section>
