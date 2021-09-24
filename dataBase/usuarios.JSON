@@ -130,5 +130,17 @@
   "email": "vc@uol.com",
   "password": "$2b$10$VwvtjB3SKhuCoKEsE5Vgeet5qX6fnm0QV0SgLTRSdEzYobENwRryS",
   "clearance": "usuarioComum"
+ },
+ {
+  "nome": "helena",
+  "email": "helena",
+  "password": "$2b$10$6.2/hj1xwjUr62qQ11knGel3Z4Fl6jlM77ggJaideTpxoBuYwHKxy",
+  "clearance": "usuarioComum"
+ },
+ {
+  "nome": "helena@uol.com",
+  "email": "helena@uol.com",
+  "password": "$2b$10$dpYxZVbq7LbGfAdBNXklY.SBhliJYtyjAg6hm9czQu1Gp5Qe3M.xa",
+  "clearance": "usuarioComum"
  }
 ]

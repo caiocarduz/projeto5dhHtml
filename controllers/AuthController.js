@@ -69,7 +69,7 @@ module.exports = {
         console.log(req.session.user)
         req.session.save();
         
-        if(typeof(user) !== undefined){
+        if(typeof(user) !== "undefined"){
             res.redirect("/login?error=usuariojaexiste")
         }else {
             let novoUsuario = {
