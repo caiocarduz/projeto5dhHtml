@@ -70,25 +70,20 @@ module.exports = {
         }
         const SenhaHash = bcrypt.hashSync(password, saltRounds)
         const usuario = usuarios.find( user => user.email == email)
-        if(typeof(usuario) !== "undefined"){
-            res.redirect("/login?error=usuariojaexiste")
-        }else {
-            let novoUsuario = {
-                nome:email,
-                email:email,
-                password: SenhaHash,
-                clearance: "usuarioComum"
-            }
+        let novoUsuario = {
+            nome:email,
+            email:email,
+            password: SenhaHash,
+            clearance: "usuarioComum"
+        }
 
-            usuarios.push(novoUsuario)
-            // fs.writeFileSync(path.join(__dirname, "../database/usuarios.json"), JSON.stringify(novoUsuario, null, 1));
-            fs.writeFileSync(path.join(__dirname, "../database/usuarios.json"), JSON.stringify(usuarios,null,1));
-            const usuario = usuarios.find( user => user.email == email)
-            req.session.user = usuario
-            console.log(req.session.user)
-            res.redirect('/home')
-            }
+        usuarios.push(novoUsuario)
+        // fs.writeFileSync(path.join(__dirname, "../database/usuarios.json"), JSON.stringify(novoUsuario, null, 1));
+        fs.writeFileSync(path.join(__dirname, "../database/usuarios.json"), JSON.stringify(usuarios,null,1));
+        req.session.user = novoUsuario
+        req.session.save();
+        // console.log(req.session.user)
+        res.redirect("/home")
+     }
 
-        
-    }
 } 
