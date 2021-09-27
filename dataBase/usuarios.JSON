@@ -328,5 +328,17 @@
   "email": "fff@uol.com",
   "password": "$2b$10$jHbsuZW90i60RH4Ps1mYZuZdu9FQF1ZWDcOlcNzE/ZRIWiOnA2MLa",
   "clearance": "usuarioComum"
+ },
+ {
+  "nome": "nmk@yol.com",
+  "email": "nmk@yol.com",
+  "password": "$2b$10$eDzOLN3770yKVIw5loswn.Awi2ONcSO33f27tI4U3t8QAYGEfyCuS",
+  "clearance": "usuarioComum"
+ },
+ {
+  "nome": "caio.carduz@uol.com",
+  "email": "caio.carduz@uol.com",
+  "password": "$2b$10$YFlubvW8yU6EdgowKTf/HO5CvYs5fqsIEi0AtrFPE/WOokJ0XKiHe",
+  "clearance": "usuarioComum"
  }
 ]
