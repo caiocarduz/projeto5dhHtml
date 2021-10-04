@@ -18,7 +18,10 @@
     "http-errors": "~1.6.3",
     "jsonwebtoken": "^8.5.1",
     "morgan": "~1.9.1",
+    "mysql2": "^2.3.0",
     "nodemon": "^2.0.12",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "sequelize": "^6.6.5",
+    "sequelize-cli": "^6.2.0"
   }
 }
