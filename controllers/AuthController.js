@@ -26,15 +26,8 @@ module.exports = {
         // req.session.user = usuario
         // req.session.save();
         // console.log(req.session.user)
-
-        if(usuario === null){
-            // req.session.destroy();
-            res.redirect("/login?error=usuarioInexistente")
             
-        } else  if (!bcrypt.compareSync(password , usuario.senha)){
-            // req.session.destroy();
-            res.redirect("/login?error=senhaIncorreta")
-        } else{
+        if (bcrypt.compareSync(password , usuario.senha)){
             req.session.user = usuario
             req.session.save();
             console.log(req.session.user)
