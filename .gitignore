@@ -1,5 +1,6 @@
 # dependencies
+dataBase/config/config.json
 /node_modules
 /.pnp
 .pnp.js
-dataBase/config/config.json
+
