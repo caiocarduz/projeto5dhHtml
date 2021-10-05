@@ -18,9 +18,14 @@ module.exports = {
         
             // If password and confirm password not same
             // don't allow to sign up and throw error
-            if (!bcrypt.compareSync(password, usuario.senha)){
-                throw new Error('Senha incorreta')
-            }        
+            if (usuario !== null){
+                if (!bcrypt.compareSync(password, usuario.senha)){
+                    throw new Error('Senha incorreta')
+                }    
+
+            } else{
+                throw new Error("Usuario nao encontrado")
+            }
           }),
         
 }
