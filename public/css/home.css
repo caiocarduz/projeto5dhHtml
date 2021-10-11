@@ -196,10 +196,11 @@
 
 }
 .terceiraSecao img{
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    margin-bottom: 10px;
+  text-align: center;
+  height: 67%;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 .quartaSecao{
     display: flex;
