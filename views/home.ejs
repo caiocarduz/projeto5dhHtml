@@ -40,11 +40,11 @@
       <% if (card.posicao == "2") { %>
         <div class="cardSecaoDois">
           <img src="<%= card.url %>" alt="">
-          <p class= "preco"> <%=card.preco%></p>
+          <p class= "preco"> <%=Number(card.preco).toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' })%></p>
           <p class="frete"> Frete grátis</p>
           <p class="descricaoProduto"> <%=card.nome%></p>
           <br>
-          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
+          <a href="./produtodetalhes/<%= card.id %> " class="vermais"> Ver mais</a>
       </div>
       <% } %>   
     <% } %>
@@ -118,13 +118,13 @@
       <% if (card.posicao == "3") { %>
         <a href="./produtodetalhes"></a><div>
           <img src="<%= card.url %>" alt="">
-          <p class="precoAnterior"><strike>De <%= card.preco %></strike></p>
-          <p class="precoAtual">Por <%= card.preco %></p>
+          <p class="precoAnterior"><strike>De <%= Number(card.preco).toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) %></strike></p>
+          <p class="precoAtual">Por <%= Number(card.preco).toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) %></p>
           <p class="precoParcelado"> ou 10x sem juros</p>
           <p class="frete"> Frete grátis</p>
           <p class="descricaoProduto"><%= card.nome %></p>
           <br>
-          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
+          <a href="./produtodetalhes/<%= card.id %>" class="vermais"> Ver mais</a>
       </div></a>
       <% } %>
 
@@ -149,13 +149,13 @@
               <img class="carousel-cell2-image"
             data-flickity-lazyload=<%= card.url %> alt="tulip" />
           </div>
-          <p class="precoAnterior"><strike>De <%= card.preco %></strike></p>
-          <p class="precoAtual"> Por <%= card.preco %> </p>
+          <p class="precoAnterior"><strike>De <%= Number(card.preco).toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) %></strike></p>
+          <p class="precoAtual"> Por <%= Number(card.preco).toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) %> </p>
           <p class="precoParcelado"> ou 10x sem juros</p>
           <p class="frete"> Frete grátis</p>
           <p class="descricaoProduto"><%= card.nome %> </p>
           
-          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
+          <a href="./produtodetalhes/<%= card.id %>" class="vermais"> Ver mais</a>
         </div>
       <% } %>
 

@@ -17,8 +17,11 @@ module.exports = {
     login: (req, res) =>{
         res.render('login' )
     },
-    produtoDetalhes: (req, res) =>{
-        res.render('produtoDetalhes',{logged_user : req.session.user, detalhes})
+    produtoDetalhes: async (req, res) =>{
+        console.log(req.params.id)
+        const p = await Produto.findByPk(req.params.id);
+        console.log(p)
+        res.render('produtoDetalhes',{p:p, logged_user : req.session.user, detalhes})
     }
 
 }

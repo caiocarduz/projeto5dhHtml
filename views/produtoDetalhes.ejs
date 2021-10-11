@@ -18,43 +18,20 @@
             SmartPhones
         </div>
         <div id="produto">
-            <img id="imagemProduto" src="<%= detalhes[0].caminhoImagem %>" alt="">
+            <img id="imagemProduto" src= ".<%= p.url %>" alt="">
         </div>
         <div id="detalhes">
-            <div id="rate">
-                4/5 ★★★★☆
-            </div>
-            <div id="descricao">
-                Deixa a desejar em conectividade, é um aparelho simples que não possui conexão com Bluetooth e WiFi para acesso à Internet.
-
-Pesando 86 gramas (incluindo a bateria) o celular Nokia 1100 é bem grosso e tem 20mm de espessura.
-            </div>
             <div id="preco">
-                <%= detalhes[0].preco %> <br>
+               Preco: <%= Number(p.preco).toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) %> <br>
                 10% de desconto em 1x no cartao ou boleto.
             </div>
             <div id="comprar" class="neonText">
                 <a href="/carrinho">COMPRAR</a>
             </div>
-
-
         </div>
         <div id="fichaTecnica">
             <div id="texto">
             Modelo	1100
-            Outros nomes do modelo	Nokia 1100b for USA, Nokia 1100a, Nokia 1100i
-            País ou região onde é vendido	especificação não cadastrada
-            Marca	Nokia
-            Lançamento	outubro, 2003
-            Espessura	20 milímetros
-            Dimensões (largura x altura)	46 x 106 milímetros
-            Peso	86 gramas
-            Teclado Qwerty físico	Não suporta
-            Antena	Antena interna
-            Construção, materiais	especificação não cadastrada
-            Resistência à água e outros	Não suporta
-            Memória interna	100KB
-            Camera não tem
             </div>
         </div>
         <div id="Sessaocomentarios">
