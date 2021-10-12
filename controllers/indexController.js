@@ -18,9 +18,12 @@ module.exports = {
         res.render('login' )
     },
     produtoDetalhes: async (req, res) =>{
-        console.log(req.params.id)
         const p = await Produto.findByPk(req.params.id);
-        console.log(p)
+        let obj = { 
+            id : p.id, 
+            } 
+        res.cookie("carrinho", obj)
+        console.log(req.cookies)
         res.render('produtoDetalhes',{p:p, logged_user : req.session.user, detalhes})
     }
 
