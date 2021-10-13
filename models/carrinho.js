@@ -2,7 +2,6 @@
 const {
   Model
 } = require('sequelize');
-const carrinhoproduto = require('./carrinhoproduto');
 module.exports = (sequelize, DataTypes) => {
   class Carrinho extends Model {
     /**
@@ -12,7 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Carrinho.belongsToMany(models.Produto, {through: models.CarrinhoProduto, foreignKey:"CarrinhoId" });
+      // Carrinho.belongsToMany(models.Produto, {through:models.CarrinhoProduto, unique: false , foreignKey:"CarrinhoId" });
+      Carrinho.belongsTo(models.Produto)
     }
   };
   Carrinho.init({

@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var expressSession= require('express-session')
+var methodOverride = require('method-override')
 const flash = require("express-flash");
 // importando os arquivos de rotas
 var indexRouter = require('./routes/index');
@@ -29,7 +30,7 @@ app.use(expressSession({
 app.use(flash());
 app.use('/',RequestLoggerMiddleware);
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(methodOverride('_method'))
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/', carrinhoRouter)
