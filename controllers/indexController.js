@@ -8,6 +8,7 @@ module.exports = {
         const cards2 = await Produto.findAll();
         console.log(cards2)
         res.render('home', {cards1, cards2, logged_user : req.session.user});
+        // res.json(cards2)
         
     },
     produtos: (req,res) => {

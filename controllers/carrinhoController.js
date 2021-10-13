@@ -1,4 +1,4 @@
-const {Carrinho, Produto, sequelize} = require("../models");
+const {Carrinho, Produto, CarrinhoProduto, sequelize} = require("../models");
 module.exports = {
 	carrinho:(req, res) => {
 		produtoId = req.cookies.carrinho.id
@@ -11,10 +11,28 @@ module.exports = {
 		})
 	},
 	pedido: async (req, res) => {
-		const produto = await Carrinho.findAll( {where:{
+		const carrinho = await Carrinho.findOne({where:{
 			UserId: req.session.user.id
 		}})
-		res.json(produto)
+		console.log(req.session.user.id)
+		const prod = await Produto.findOne({where:{
+			id: req.cookies.carrinho.id 
+		}})
+		console.log(prod.id)
+		const carrinhoProduto = await CarrinhoProduto.create({ProdutoId: prod.id,
+		CarrinhoId: carrinho.id})
+
+		const p = await Carrinho.findAll({where:{
+			UserId: req.session.user.id
+		},
+		include: Produto
+		 })
+		 const pProdutos = p.map(x => x.Produtos)
+		 const prodCarrinhos = (pProdutos[0])
+		 console.log(prodCarrinhos)
+		 res.render("pedido", {pedidos: prodCarrinhos})
+
+		// res.json(prodCarrinhos)
 	}
 
 }
