@@ -21,10 +21,10 @@
   <section class="segundaSecao">
     <% for(let pedido of pedidos) { %>
         <div class="pedidoSecaoDois">
-          <img src="<%= pedido.url %>" alt="">
-          <p class= "preco"> <%=Number(pedido.preco).toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' })%></p>
+          <img src="<%= pedido.produto.url %>" alt="">
+          <p class= "preco"> <%=Number(pedido.produto.preco).toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' })%></p>
           <p class="frete"> Frete grátis</p>
-          <p class="descricaoProduto"> <%=pedido.nome%></p>
+          <p class="descricaoProduto"> <%=pedido.produto.nome%></p>
           <br>
           <form method="POST" action="/delete?_method=DELETE">
             <input type="hidden", name= "id", value=<%= pedido.id %> >

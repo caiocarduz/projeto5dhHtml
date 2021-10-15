@@ -12,7 +12,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       // Carrinho.belongsToMany(models.Produto, {through:models.CarrinhoProduto, unique: false , foreignKey:"CarrinhoId" });
-      Carrinho.belongsTo(models.Produto)
+      Carrinho.belongsTo(models.Produto, {as: "produto"});
+      Carrinho.belongsTo(models.Usuario, {as: "usuario", foreignKey: "UserId"})
     }
   };
   Carrinho.init({
