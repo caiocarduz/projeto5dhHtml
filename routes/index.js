@@ -3,7 +3,6 @@ var router = express.Router();
 
 var indexController = require('../controllers/indexController')
 var carrinhoController = require('../controllers/carrinhoController')
-var produtoDetalhes = require('../controllers/produtoDetalhes')
 const { body, validationResult } = require('express-validator')
 
 /* GET home page. */
@@ -13,5 +12,5 @@ router.get('/home', indexController.home);
 router.get('/produtos', indexController.produtos)
 router.get('/login', indexController.login)
 router.get('/carrinho', carrinhoController.carrinho);
-router.get('/produtodetalhes', indexController.produtoDetalhes)
+router.get('/produtodetalhes/:id', indexController.produtoDetalhes)
 module.exports = router;

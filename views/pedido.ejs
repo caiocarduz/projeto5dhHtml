@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/flickity.css" media="screen"> 
+    <link rel="stylesheet" href="/css/header.css" media="screen"> 
+    <link rel="stylesheet" href="/css/footer.css" media="screen"> 
+</head>
+<body>
+  <%- include("./partials/header"); %>
+
+  <section class="segundaSecao">
+    <% for(let pedido of pedidos) { %>
+        <div class="pedidoSecaoDois">
+          <img src="<%= pedido.url %>" alt="">
+          <p class= "preco"> <%=Number(pedido.preco).toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' })%></p>
+          <p class="frete"> Frete grátis</p>
+          <p class="descricaoProduto"> <%=pedido.nome%></p>
+          <br>
+          <form method="POST" action="/delete?_method=DELETE">
+            <input type="hidden", name= "id", value=<%= pedido.id %> >
+            <button type="submit">Delete resource</button>
+          </form>
+         
+        </div>
+       
+    <% } %>
+    
+  </section>
+ 
+  <%- include("./partials/footer") %>
+</body>
+<!-- JavaScript -->
+<script src="/js/flickity.pkgd.min.js"></script>
+<script src="/js/header.js"></script>
+</html>

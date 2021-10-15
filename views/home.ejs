@@ -37,14 +37,16 @@
 
   <section class="segundaSecao">
     <% for(let card of cards2) { %>
-      <div class="cardSecaoDois">
-          <img src="<%= card.caminhoImagem %>" alt="">
-          <p class= "preco"> <%=card.preco%></p>
+      <% if (card.posicao == "2") { %>
+        <div class="cardSecaoDois">
+          <img src="<%= card.url %>" alt="">
+          <p class= "preco"> <%=Number(card.preco).toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' })%></p>
           <p class="frete"> Frete grátis</p>
           <p class="descricaoProduto"> <%=card.nome%></p>
           <br>
-          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
+          <a href="./produtodetalhes/<%= card.id %> " class="vermais"> Ver mais</a>
       </div>
+      <% } %>   
     <% } %>
     
   </section>
@@ -111,18 +113,23 @@
   <p class="divisaoSecao">AS MELHORES OFERTAS</p>
   <section class="terceiraSecao fonteMenor">
     <!-- Adcionando cards do banco cards -->
-    <% for(let card of cards1) {%>  
-      <a href="./produtodetalhes"></a><div>
-          <img src="<%= card.caminhoImagem %>" alt="">
-          <p class="precoAnterior"><strike>R$ 5.780,00</strike></p>
-          <p class="precoAtual">Por R$ 3.7680,00 à vista</p>
-          <p class="precoParcelado"> ou 10x de R$ 425,00</p>
+   
+    <% for(let card of cards2) {%>  
+      <% if (card.posicao == "3") { %>
+        <a href="./produtodetalhes"></a><div>
+          <img src="<%= card.url %>" alt="">
+          <p class="precoAnterior"><strike>De <%= Number(card.preco).toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) %></strike></p>
+          <p class="precoAtual">Por <%= Number(card.preco).toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) %></p>
+          <p class="precoParcelado"> ou 10x sem juros</p>
           <p class="frete"> Frete grátis</p>
           <p class="descricaoProduto"><%= card.nome %></p>
           <br>
-          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
+          <a href="./produtodetalhes/<%= card.id %>" class="vermais"> Ver mais</a>
       </div></a>
+      <% } %>
+
     <% } %>
+     
      
   </section>
 
@@ -135,85 +142,24 @@
 
   <!-- Flickity HTML init -->
   <div class="carousel2" data-flickity='{ "groupCells": true, "lazyLoad": true }'>
-      <div class="carousel-cell-container" >
+    <% for(let card of cards2) { %>
+      <% if (card.posicao == "carrosel footer") { %>
+        <div class="carousel-cell-container" >
           <div class="carousel-cell2">
               <img class="carousel-cell2-image"
-            data-flickity-lazyload="./img/iphone.jpg" alt="tulip" />
+            data-flickity-lazyload=<%= card.url %> alt="tulip" />
           </div>
-          <p class="precoAnterior"><strike>R$ 5.780,00</strike></p>
-          <p class="precoAtual">Por R$ 3.7680,00 à vista</p>
-          <p class="precoParcelado"> ou 10x de R$ 425,00</p>
+          <p class="precoAnterior"><strike>De <%= Number(card.preco).toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) %></strike></p>
+          <p class="precoAtual"> Por <%= Number(card.preco).toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) %> </p>
+          <p class="precoParcelado"> ou 10x sem juros</p>
           <p class="frete"> Frete grátis</p>
-          <p class="descricaoProduto">descricao do produto</p>
+          <p class="descricaoProduto"><%= card.nome %> </p>
           
-          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
-      </div>
-      <div class="carousel-cell-container" >
-          <div class="carousel-cell2">
-              <img class="carousel-cell2-image"
-            data-flickity-lazyload="./img/brinquedos.jpg" alt="tulip" />
-          </div>
-          <p class="precoAnterior"><strike>R$ 5.780,00</strike></p>
-          <p class="precoAtual">Por R$ 3.7680,00 à vista</p>
-          <p class="precoParcelado"> ou 10x de R$ 425,00</p>
-          <p class="frete"> Frete grátis</p>
-          <p class="descricaoProduto">descricao do produto</p>
-          
-          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
-      </div>
-    <div class="carousel-cell-container" >
-          <div class="carousel-cell2">
-              <img class="carousel-cell2-image"
-            data-flickity-lazyload="./img/vinho.png" alt="tulip" />
-          </div>
-          <p class="precoAnterior"><strike>R$ 5.780,00</strike></p>
-          <p class="precoAtual">Por R$ 3.7680,00 à vista</p>
-          <p class="precoParcelado"> ou 10x de R$ 425,00</p>
-          <p class="frete"> Frete grátis</p>
-          <p class="descricaoProduto">descricao do produto</p>
-          
-          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
-    </div>
-    <div class="carousel-cell-container" >
-          <div class="carousel-cell2">
-              <img class="carousel-cell2-image"
-            data-flickity-lazyload="./img/furadeira.jpg" alt="tulip" />
-          </div>
-          <p class="precoAnterior"><strike>R$ 5.780,00</strike></p>
-          <p class="precoAtual">Por R$ 3.7680,00 à vista</p>
-          <p class="precoParcelado"> ou 10x de R$ 425,00</p>
-          <p class="frete"> Frete grátis</p>
-          <p class="descricaoProduto">descricao do produto</p>
-          
-          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
-    </div>
-    <div class="carousel-cell-container" >
-          <div class="carousel-cell2">
-              <img class="carousel-cell2-image"
-            data-flickity-lazyload="./img/tv.png" alt="tulip" />
-          </div>
-          <p class="precoAnterior"><strike>R$ 5.780,00</strike></p>
-          <p class="precoAtual">Por R$ 3.7680,00 à vista</p>
-          <p class="precoParcelado"> ou 10x de R$ 425,00</p>
-          <p class="frete"> Frete grátis</p>
-          <p class="descricaoProduto">descricao do produto</p>
-          
-          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
-    </div>
-    <div class="carousel-cell-container" >
-          <div class="carousel-cell2">
-              <img class="carousel-cell2-image"
-            data-flickity-lazyload="./img/iphone.jpg" alt="tulip" />
-          </div>
-          <p class="precoAnterior"><strike>R$ 5.780,00</strike></p>
-          <p class="precoAtual">Por R$ 3.7680,00 à vista</p>
-          <p class="precoParcelado"> ou 10x de R$ 425,00</p>
-          <p class="frete"> Frete grátis</p>
-          <p class="descricaoProduto">descricao do produto</p>
-          
-          <a href="./produtodetalhes" class="vermais"> Ver mais</a>
-    </div>
-  
+          <a href="./produtodetalhes/<%= card.id %>" class="vermais"> Ver mais</a>
+        </div>
+      <% } %>
+
+    <% } %>
   </div>
   <%- include("./partials/footer") %>
 </body>
