@@ -13,7 +13,7 @@ module.exports = {
 			res.status(404).redirect("/home")
 		})
 	},
-	pedido: async (req, res) => {
+	pedido: async (req, res, next) => {
 		// const carrinho = await Carrinho.findOne({where:{
 		// 	ProdutoId: req.cookies.carrinho.id 
 		// }})
@@ -79,7 +79,7 @@ module.exports = {
 			// 	CarrinhoId : idCarrinho.id
 			// }})
 
-			res.redirect("/")
+			res.redirect("/pedido")
 
 		} catch(e){
 			console.log(e)
