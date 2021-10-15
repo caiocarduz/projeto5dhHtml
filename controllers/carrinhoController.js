@@ -51,6 +51,7 @@ module.exports = {
 	},
 	removeProduto: async (req, res) => {
 		try{
+			console.log(req)
 			idCarrinho = await Carrinho.findOne({where: {
 				Userid: req.session.user.id
 			}})
