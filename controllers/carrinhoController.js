@@ -1,5 +1,6 @@
-const {Carrinho, Produto, Usuario, CarrinhoProduto, sequelize} = require("../models");
+const {Carrinho, Produto, Usuario, Pedido2, CarrinhoProduto, sequelize} = require("../models");
 const { Op } = require("sequelize");
+
 // const Usuario = require("../models/Usuario");
 module.exports = {
 	carrinho:(req, res) => {
@@ -62,6 +63,7 @@ module.exports = {
 
 	},
 	removeProduto: async (req, res) => {
+		
 		try{
 			console.log(req)
 			idCarrinho = await Carrinho.findOne({where: {
@@ -84,6 +86,23 @@ module.exports = {
 		} catch(e){
 			console.log(e)
 		}
+
+	},
+	finalizarPedido: async (req, res) => {
+		const p = await Usuario.findOne({where:{
+			email: req.session.user.email
+		 }})
+		const data = {
+			UserId: p.id,
+			ValorTotal: 2.3,
+		}
+
+		await Pedido2.create(data)
+		pedido = await Pedido2.findAll({where:{
+			UserId: p.id
+		}})
+		
+		res.json(pedido)
 
 	}
 
