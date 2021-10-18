@@ -1,5 +1,6 @@
-const {Carrinho, Produto, Usuario, Pedido2, CarrinhoProduto, sequelize} = require("../models");
+const {Carrinho, Produto, Usuario, Pedido2, PedidoDetalhes, CarrinhoProduto, sequelize} = require("../models");
 const { Op } = require("sequelize");
+const pedidodetalhes = require("../models/pedidodetalhes");
 
 // const Usuario = require("../models/Usuario");
 module.exports = {
@@ -97,12 +98,32 @@ module.exports = {
 			ValorTotal: 2.3,
 		}
 
-		await Pedido2.create(data)
+		const test = await Pedido2.create({
+			UserId: p.id,
+			ValorTotal: 5.6,
+			detalhes: [{
+				UserId: p.id,
+				ProdutoId: 4
+
+			}]
+
+
+		},
+		{
+			include:[{
+				model: PedidoDetalhes,
+				as: 'detalhes'
+			}
+				
+			]
+		}
+
+		)
 		pedido = await Pedido2.findAll({where:{
 			UserId: p.id
 		}})
 		
-		res.json(pedido)
+		res.json(test)
 
 	}
 
