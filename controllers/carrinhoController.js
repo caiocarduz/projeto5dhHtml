@@ -115,32 +115,25 @@ module.exports = {
 		const tables = carrinho.map(el => el.produto.id)
 		console.log(tables)
 
-		for (const table of tables) {
-			await Pedido2.create({
-				UserId: p.id,
-				ValorTotal: 5.6,
-				detalhes: [{
-					UserId: p.id,
-					ProdutoId: table
+		const criaPedido = await Pedido2.create({
+			UserId: p.id,
+			ValorTotal: 5.6
+		})
 
-				}]
-			},
-			{
-				include:[{
-					model: PedidoDetalhes,
-					as: 'detalhes'
-				}
-					
-				]
-			}
-
-			)
-		}
-
-		pedido = await Pedido2.findAll({where:{
+		pedido = await Pedido2.findOne({where:{
 			UserId: p.id
-		}})
+		},
+  			order: [ [ 'createdAt', 'DESC' ]]
+		})
+
+		for (const table of tables) {
+			await PedidoDetalhes.create({
+				PedidoId: pedido.id,
+				UserId: p.id,
+				ProdutoId: table
+			})
 		
+		}	
 		res.json(pedido)
 
 	}
