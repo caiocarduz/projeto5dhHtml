@@ -98,32 +98,50 @@ module.exports = {
 			ValorTotal: 2.3,
 		}
 
-		const test = await Pedido2.create({
-			UserId: p.id,
-			ValorTotal: 5.6,
-			detalhes: [{
-				UserId: p.id,
-				ProdutoId: 4
-
-			}]
-
-
+		const carrinho = await Carrinho.findAll({where:{
+			UserId: p.id
 		},
-		{
-			include:[{
-				model: PedidoDetalhes,
-				as: 'detalhes'
+		include:[
+				{
+				model: Produto,
+				as: "produto"
+			},
+			{
+				model: Usuario,
+				as: "usuario"
 			}
-				
-			]
+		]})
+
+		const tables = carrinho.map(el => el.produto.id)
+		console.log(tables)
+
+		for (const table of tables) {
+			await Pedido2.create({
+				UserId: p.id,
+				ValorTotal: 5.6,
+				detalhes: [{
+					UserId: p.id,
+					ProdutoId: table
+
+				}]
+			},
+			{
+				include:[{
+					model: PedidoDetalhes,
+					as: 'detalhes'
+				}
+					
+				]
+			}
+
+			)
 		}
 
-		)
 		pedido = await Pedido2.findAll({where:{
 			UserId: p.id
 		}})
 		
-		res.json(test)
+		res.json(pedido)
 
 	}
 
