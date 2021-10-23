@@ -26,9 +26,9 @@
           <p class="frete"> Frete grátis</p>
           <p class="descricaoProduto"> <%=pedido.produto.nome%></p>
           <br>
-          <form method="POST" action="/delete?_method=DELETE">
+          <form class="deletePedido" method="POST" action="/delete?_method=DELETE">
             <input type="hidden", name= "id", value=<%= pedido.id %> >
-            <button type="submit">Delete resource</button>
+            <button type="submit">Remover do carrinho</button>
           </form>
          
         </div>
