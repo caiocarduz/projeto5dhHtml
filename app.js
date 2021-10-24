@@ -12,6 +12,7 @@ var usersRouter = require('./routes/users');
 var carrinhoRouter = require('./routes/carrinhoRotas')
 var RequestLoggerMiddleware = require('./middlewares/RequestLoggerMiddleware')
 var loginRouter = require('./routes/loginRouter')
+var auth = require('./middlewares/auth')
 var app = express();
 
 // view engine setup
