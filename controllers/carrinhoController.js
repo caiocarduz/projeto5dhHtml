@@ -131,9 +131,11 @@ module.exports = {
 				PedidoId: pedido.id,
 				UserId: p.id,
 				ProdutoId: table
-			})
-		
+			})	
 		}	
+		Carrinho.destroy({where:{
+			UserId: p.id
+		}})
 		res.json(pedido)
 
 	}
