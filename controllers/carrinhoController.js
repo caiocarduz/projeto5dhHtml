@@ -126,7 +126,7 @@ module.exports = {
   			order: [ [ 'createdAt', 'DESC' ]]
 		})
 
-		for (const table of tables) {
+		for await (const table of tables) {
 			await PedidoDetalhes.create({
 				PedidoId: pedido.id,
 				UserId: p.id,
