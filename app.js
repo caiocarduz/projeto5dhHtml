@@ -10,8 +10,11 @@ const flash = require("express-flash");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var carrinhoRouter = require('./routes/carrinhoRotas')
+var usuariosRouter = require('./routes/users')
 var RequestLoggerMiddleware = require('./middlewares/RequestLoggerMiddleware')
 var loginRouter = require('./routes/loginRouter')
+var auth = require('./middlewares/auth');
+const pedidoDetalhes = require('./models/pedidodetalhes');
 var app = express();
 
 // view engine setup
@@ -32,7 +35,7 @@ app.use('/',RequestLoggerMiddleware);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'))
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/users', usuariosRouter);
 app.use('/', carrinhoRouter)
 app.use('/', loginRouter)
 // catch 404 and forward to error handler

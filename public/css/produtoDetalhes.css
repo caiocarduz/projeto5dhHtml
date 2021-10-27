@@ -99,3 +99,14 @@ margin-bottom: 30px;
 #comentario{
     width: 80%;
 }
+
+#pagar{
+    width: 210px;
+    height: 80px;
+    color:#ace4fa;
+    background-color: #0e306e;
+    font-size: x-large;
+    font-weight: bolder;
+    border: none;
+    border-radius: 15px;
+   }

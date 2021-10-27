@@ -59,13 +59,17 @@ module.exports = {
             res.redirect("/login?error=usuariojaexiste")
         }else {
             let novoUsuario = {
-                nome:email.toString(),
-                email:email.toString(),
+                nome:email,
+                email:email,
                 senha: SenhaHash,
             }
-
+           
             await Usuario.create(novoUsuario)
-            req.session.user = novoUsuario
+            const usuario = await Usuario.findOne( {where: {
+                email : novoUsuario.email
+            }})
+            req.session.user = usuario
+            req.session.save();
             console.log(req.session.user)
             res.redirect('/home')
             }

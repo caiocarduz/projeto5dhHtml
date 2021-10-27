@@ -7,7 +7,7 @@ module.exports = {
     home: async (req, res) =>{
         const cards2 = await Produto.findAll();
         console.log(cards2)
-        res.render('home', {cards1, cards2, logged_user : req.session.user});
+        res.render('home', {cards1, cards2, logged_user : req.session.user,  message: req.flash('message')});
         // res.json(cards2)
         
     },

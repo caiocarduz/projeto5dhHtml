@@ -25,11 +25,9 @@
                Preco: <%= Number(p.preco).toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) %> <br>
                 10% de desconto em 1x no cartao ou boleto.
             </div>
-            <div id="comprar" class="neonText">
-                <form action="/carrinho" method="post">
-                    <input type="submit" name="upvote" value="Adicionar ao carrinho" />
-                </form>
-            </div>
+            <form  action="/carrinho" method="post">
+                <button type="submit" id="pagar">Adicionar ao carrinho</button>
+            </form>
         </div>
         <div id="fichaTecnica">
             <div id="texto">
