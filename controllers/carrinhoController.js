@@ -1,6 +1,6 @@
 const {Carrinho, Produto, Usuario, Pedido2, PedidoDetalhes, CarrinhoProduto, sequelize} = require("../models");
 const { Op } = require("sequelize");
-const pedidodetalhes = require("../models/pedidodetalhes");
+
 
 // const Usuario = require("../models/Usuario");
 module.exports = {
@@ -136,7 +136,8 @@ module.exports = {
 		Carrinho.destroy({where:{
 			UserId: p.id
 		}})
-		res.json(pedido)
+		req.flash('message', 'Pedido aprovado');
+		res.redirect("/")
 
 	}
 

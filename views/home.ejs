@@ -17,6 +17,10 @@
 </head>
 <body>
   <%- include("./partials/header"); %>
+
+  <% if (typeof(message) != 'undefined') { %>
+    <h1 class="alert alert-info"><%= message %></h1>
+  <% } %>
     
   <section class="carousel" aria-label="Gallery">
 
