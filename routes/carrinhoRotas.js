@@ -7,7 +7,7 @@ const { carrinho } = require('../controllers/carrinhoController');
 router.post('/carrinho', auth, carrinhoController.carrinho);
 router.get('/pedido', auth,  carrinhoController.pedido);
 router.get('/pedido/descricao', carrinhoController.pedidoDescricao);
-router.get('/finalizarpedido', carrinhoController.finalizarPedido);
-router.delete('/delete', carrinhoController.removeProduto);
+router.get('/finalizarpedido', auth, carrinhoController.finalizarPedido);
+router.delete('/delete', auth, carrinhoController.removeProduto);
 
 module.exports = router;

@@ -6,6 +6,7 @@ module.exports = {
     validatePassword: check('password')
   
         .isLength(5)
+        .withMessage('senha deve conter ao menos 5 caracteres')
         .notEmpty()
         .withMessage("senha deve conter ao menos 5 caracteres")
 
@@ -24,7 +25,7 @@ module.exports = {
                 }    
 
             } else{
-                throw new Error("Usuario nao encontrado")
+                throw new Error("Usuário não encontrado")
             }
           }),
         

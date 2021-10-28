@@ -22,6 +22,7 @@
             <a> 
                 <% if (typeof(logged_user) != "undefined") { %>
                     <a> <%= logged_user.nome %> </a>
+                    <a href="/pedido">Carrinho</a>
                     <a href="/logout">Logout</a>
                 <% } else { %>
                     <a id="neonText" href="/login"> login/entrar</a>
