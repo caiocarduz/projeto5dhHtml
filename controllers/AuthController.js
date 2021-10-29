@@ -15,22 +15,12 @@ module.exports = {
         const password = req.body.password.toString()
         const listaDeErrors = validationResult(req);
         if (!listaDeErrors.isEmpty()) {
-          /*   req.flash('errors', errors.array())
-            console.log(errors) */
             res.render('login', {errors: listaDeErrors.errors});
         }
-
-        // const usuario = usuarios.find( u => u.email == email)
-        const usuario = await Usuario.findOne({ where: { email: email} });
-        console.log(usuario)
-        // req.session.user = usuario
-        // req.session.save();
-        // console.log(req.session.user)
-            
+        const usuario = await Usuario.findOne({ where: { email: email} });    
         if (bcrypt.compareSync(password , usuario.senha)){
             req.session.user = usuario
             req.session.save();
-            console.log(req.session.user)
             res.redirect("/home")
         }
     },
@@ -40,11 +30,6 @@ module.exports = {
         res.redirect("/home")
 
     },
-
-    // userView: (req, res, next) =>{
-    //     console.log(req.session.user)
-    //     res.render('home', {cards1, cards2, logged_user : req.session.user})
-    // },
     createUser:  async (req, res) => {
         
 
@@ -70,10 +55,7 @@ module.exports = {
             }})
             req.session.user = usuario
             req.session.save();
-            console.log(req.session.user)
             res.redirect('/home')
-            }
-
-        
+            } 
     }
 } 

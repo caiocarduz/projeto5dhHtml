@@ -6,9 +6,7 @@ const {Produto, sequelize} = require("../models");
 module.exports = {
     home: async (req, res) =>{
         const cards2 = await Produto.findAll();
-        res.render('home', {cards1, cards2, logged_user : req.session.user,  message: req.flash('message')});
-        // res.json(cards2)
-        
+        res.render('home', {cards1, cards2, logged_user : req.session.user,  message: req.flash('message')});  
     },
     produtos: (req,res) => {
         res.render('produtos',{logged_user : req.session.user})

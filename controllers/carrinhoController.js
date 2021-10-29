@@ -51,28 +51,14 @@ module.exports = {
 
 		 })
 
-		//  const prodCarrinhos = (pProdutos.flat())
-		//  console.log(prodCarrinhos)
-		// // res.redirect("/pedido/descricao")
 		 res.render("pedido", {pedidos: produtosCarrinho, logged_user : req.session.user, totalPrice: totalPrice})
-		// res.json(pProdutos)
 	},
 	pedidoDescricao: async (req, res) => {
-		// const p = await Carrinho.findAll({where:{
-		// 	UserId: req.session.user.id
-		// },
-		// include: Produto
-		//  })
-		// const pProdutos = p.map(el => el.Produtos)
-		// const prodCarrinhos = (pProdutos.flat())
-		// res.render("pedido", {pedidos: prodCarrinhos, logged_user : req.session.user})
-
 
 	},
 	removeProduto: async (req, res) => {
 		
 		try{
-			console.log(req)
 			idCarrinho = await Carrinho.findOne({where: {
 				produtoid: req.session.user.id
 			}})
@@ -83,17 +69,11 @@ module.exports = {
 	
 				]
 			}})
-
-			// await CarrinhoProduto.destroy({where:{
-			// 	CarrinhoId : idCarrinho.id
-			// }})
-
 			res.redirect("/pedido")
 
 		} catch(e){
 			console.log(e)
 		}
-
 	},
 	finalizarPedido: async (req, res) => {
 		const p = await Usuario.findOne({where:{
