@@ -22,6 +22,14 @@ module.exports = {
             } 
         res.cookie("carrinho", obj)
         res.render('produtoDetalhes',{p:p, logged_user : req.session.user, detalhes})
+    },
+    search: async (req,res) =>{
+        const busca = req.query.produto
+        const cards = await Produto.findAll();
+        let result = cards.filter(c => c.nome.toUpperCase().includes(busca.toUpperCase()));
+        res.render('home', { cards2: result, logged_user : req.session.user,  message: req.flash('message')});  
+
+
     }
 
 }
