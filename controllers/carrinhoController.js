@@ -20,13 +20,16 @@ module.exports = {
 		include:[
 				{
 				model: Produto,
-				as: "produto"
+				as: "produto",
+				attributes: [],
 			},
 			{
 				model: Usuario,
-				as: "usuario"
+				as: "usuario",
+				attributes: [],
 			}
-		]
+		],
+		group: ['Carrinho.UserId'],
 
 		 })
 
@@ -105,13 +108,17 @@ module.exports = {
 		include:[
 				{
 				model: Produto,
-				as: "produto"
+				as: "produto",
+				attributes: [],
 			},
 			{
 				model: Usuario,
-				as: "usuario"
+				as: "usuario",
+				attributes: [],
 			}
-		]})
+		],
+		group: ['Carrinho.UserId'],
+	})
 		const carrinho = await Carrinho.findAll({where:{
 			UserId: p.id
 		},
