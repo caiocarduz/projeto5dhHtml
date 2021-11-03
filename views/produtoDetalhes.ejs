@@ -15,15 +15,14 @@
     <!-- Inicio do Main -->
     <main>
         <div id="tipoProduto">
-            SmartPhones
+            <%= p.categoria %> 
         </div>
         <div id="produto">
             <img id="imagemProduto" src= ".<%= p.url %>" alt="">
         </div>
         <div id="detalhes">
             <div id="preco">
-               Preco: <%= Number(p.preco).toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) %> <br>
-                10% de desconto em 1x no cartao ou boleto.
+               Preço: <%= Number(p.preco).toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) %> <br>
             </div>
             <form  action="/carrinho" method="post">
                 <button type="submit" id="pagar">Adicionar ao carrinho</button>
@@ -31,7 +30,7 @@
         </div>
         <div id="fichaTecnica">
             <div id="texto">
-            Modelo	1100
+                <%= p.nome %> 
             </div>
         </div>
         <div id="Sessaocomentarios">
@@ -39,7 +38,7 @@
                 <img src="" alt="" id="avatarComentario">
                 <div id="comentario">
                     4/5 ★☆☆☆☆<br>
-                    Muito bom. ja comprei mais de 100 pelo preco.
+                    Muito bom. ja comprei mais de 100 pelo preço.
                 </div>
             </article>
         </div>

@@ -13,4 +13,5 @@ router.get('/produtos', indexController.produtos)
 router.get('/login', indexController.login)
 router.get('/carrinho', carrinhoController.carrinho);
 router.get('/produtodetalhes/:id', indexController.produtoDetalhes)
+router.get('/search', indexController.search)
 module.exports = router;

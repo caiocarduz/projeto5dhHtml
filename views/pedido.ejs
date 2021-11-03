@@ -72,9 +72,17 @@
       <div class="shine"></div>
       <div class="shine shine-layer-two"></div>
     </div>
-    <form action="/finalizarpedido" method="GET" >
-      <button type="submit" id="pagar">Concluir Pedido</button>
-    </form>
+    <div>Valor total do pedido: <%= Number(totalPrice).toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }) %> </div>
+    <section class="botaoCncluirVoltar">
+      <form action="/finalizarpedido" method="GET" >
+        <button type="submit" id="pagar">Concluir Pedido</button>
+      </form>
+      <form action="/" method="GET" >
+        <button type="submit" id="pagar">Continuar comprando</button>
+      </form>
+
+    </section>
+   
   </section>
  
   <%- include("./partials/footer") %>

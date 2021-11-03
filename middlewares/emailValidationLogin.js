@@ -16,6 +16,9 @@ module.exports = {
   
         // Custom message
         .withMessage('Email inválido')
+
+        .notEmpty()
+        .withMessage('Preencha o campo de email com um valor válido')
   
         // Custom validation
         // Validate email in use or not
@@ -24,7 +27,7 @@ module.exports = {
                 await Usuario.findOne({ where: { email: email} })
                   
             if (existingUser === null) {
-                throw new Error('Usuario nao encontrado.')
+                throw new Error('Usuário não encontrado.')
             }
         })
 }

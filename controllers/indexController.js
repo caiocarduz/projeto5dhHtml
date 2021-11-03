@@ -6,10 +6,7 @@ const {Produto, sequelize} = require("../models");
 module.exports = {
     home: async (req, res) =>{
         const cards2 = await Produto.findAll();
-        console.log(cards2)
-        res.render('home', {cards1, cards2, logged_user : req.session.user,  message: req.flash('message')});
-        // res.json(cards2)
-        
+        res.render('home', {cards1, cards2, logged_user : req.session.user,  message: req.flash('message')});  
     },
     produtos: (req,res) => {
         res.render('produtos',{logged_user : req.session.user})
@@ -24,8 +21,15 @@ module.exports = {
             id : p.id, 
             } 
         res.cookie("carrinho", obj)
-        console.log(req.cookies)
         res.render('produtoDetalhes',{p:p, logged_user : req.session.user, detalhes})
+    },
+    search: async (req,res) =>{
+        const busca = req.query.produto
+        const cards = await Produto.findAll();
+        let result = cards.filter(c => c.nome.toUpperCase().includes(busca.toUpperCase()));
+        res.render('home', { cards2: result, logged_user : req.session.user,  message: req.flash('message')});  
+
+
     }
 
 }
