@@ -4,7 +4,7 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('produtos', [{
       nome: 'prato',
-      url: './img/pratos.jpg',
+      url: '/img/pratos.jpg',
       preco: 200.99,
       posicao: "2",
       categoria: "utensilios",
@@ -13,7 +13,7 @@ module.exports = {
     },
     {
       nome: 'celular',
-      url: './img/celular.jpg',
+      url: '/img/celular.jpg',
       preco: 3000.99,
       posicao: "2",
       categoria: "eletrônicos",
@@ -22,7 +22,7 @@ module.exports = {
     },
     {
       nome: 'tv',
-      url: './img/tv.png',
+      url: '/img/tv.png',
       preco: 2000.99,
       posicao: "2",
       categoria: "eletrônicos",
@@ -31,7 +31,7 @@ module.exports = {
     },
     {
       nome: 'furadeira',
-      url: './img/furadeira.jpg',
+      url: '/img/furadeira.jpg',
       preco: 500.99,
       posicao: "carrosel footer",
       categoria: "eletrônicos",
@@ -169,6 +169,33 @@ module.exports = {
       url: './img/roupas.jpg',
       preco: 25000.99,
       posicao: "2",
+      categoria: "vestuário",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      nome: 'TV de Tubo',
+      url: '/img/produtos/TVdeTubo2.jpg',
+      preco: 25000.99,
+      posicao: "2",
+      categoria: "vestuário",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      nome: 'TV de Tubo',
+      url: '/img/produtos/TVdeTubo2.jpg',
+      preco: 25000.99,
+      posicao: "1",
+      categoria: "vestuário",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      nome: 'TV de Tubo',
+      url: '/img/produtos/TVdeTubo2.jpg',
+      preco: 25000.99,
+      posicao: "carrosel footer",
       categoria: "vestuário",
       createdAt: new Date(),
       updatedAt: new Date()
