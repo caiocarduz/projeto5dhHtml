@@ -2,7 +2,10 @@
 const cards1 = require('../dataBase/cardsHome.json')
 const cards2 = require('../dataBase/cards2Home.json')
 const detalhes = require('../dataBase/produtoDetalhes.json')
-const {Produto, sequelize} = require("../models");
+const {Produto} = require("../models");
+const {produto} = require("../models");
+
+
 module.exports = {
     home: async (req, res) =>{
         const cards2 = await Produto.findAll();
@@ -27,9 +30,15 @@ module.exports = {
         const busca = req.query.produto
         const cards = await Produto.findAll();
         let result = cards.filter(c => c.nome.toUpperCase().includes(busca.toUpperCase()));
+        
         res.render('home', { cards2: result, logged_user : req.session.user,  message: req.flash('message')});  
 
 
+    },
+    getCategoria: async (req, res)=>{
+        const {idCategoria} = req.params
+        const cards2 = await Produto.findAll({where:{categoria: idCategoria}});
+        res.render('home', {cards1, cards2, logged_user : req.session.user,  message: req.flash('message')});  
     }
 
 }
